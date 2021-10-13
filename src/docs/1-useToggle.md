@@ -1,4 +1,12 @@
-import React from 'react'
+## useToggle
+
+### You can use this hook to handle toggle for boolean varibles
+
+<br />
+
+> Example
+
+```jsx
 import { useToggle } from 'react-helper-hooks'
 
 export default function ToggleComponent() {
@@ -14,3 +22,4 @@ export default function ToggleComponent() {
         </div>
     )
 }
+```

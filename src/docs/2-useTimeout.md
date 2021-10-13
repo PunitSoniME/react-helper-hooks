@@ -1,9 +1,19 @@
-import React, { useState } from 'react'
-import { useTimeout } from 'react-helper-hooks';
+## useTimeout
 
-export default function TimeoutComponent({ defaultTimeout }: any) {
+### You can use this hook to handle timeout functionalities such as clearTimeout, setTimeout
+### Further more you can reset timeout with this hook as well.
+
+<br />
+
+> Example
+
+```jsx
+import { useTimeout } from 'react-helper-hooks'
+
+export default function TimeoutComponent() {
+
     const [count, setCount] = useState(10);
-    const { clear, reset } = useTimeout(() => setCount(0), defaultTimeout);
+    const { clear, reset } = useTimeout(() => setCount(0), 3000);
 
     return (
         <>
@@ -36,3 +46,4 @@ export default function TimeoutComponent({ defaultTimeout }: any) {
         </>
     )
 }
+```
