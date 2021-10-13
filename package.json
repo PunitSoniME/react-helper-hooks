@@ -1,12 +1,15 @@
 {
   "name": "react-helper-hooks",
-  "version": "1.0.0",
-  "description": "React Helper Hooks",
-  "author": "PunitSoniME",
+  "version": "1.0.1",
+  "description": "Custom React Helper Hooks",
+  "author": "Punit Soni <punit.soni33@gmail.com> (http://punit-soni.web.app)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PunitSoniME/react-helper-hooks.git"
+    "url": "https://github.com/PunitSoniME/react-helper-hooks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PunitSoniME/react-helper-hooks/issues"
   },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
@@ -14,6 +17,16 @@
   "engines": {
     "node": ">=10"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "keywords": [
+    "react",
+    "react hooks",
+    "r hooks",
+    "custom react hooks",
+    "common react hooks"
+  ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
