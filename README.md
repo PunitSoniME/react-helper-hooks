@@ -17,6 +17,11 @@ yarn add react-helper-hooks
 ## Usage
 - `useToggle` &mdash; handle toggle. [![][img-demo]](https://codesandbox.io/s/927kw)
 
+
+### More comming soon
+
 ## License
 
 MIT © [PunitSoniME](https://github.com/PunitSoniME)
+
+[img-demo]: https://img.shields.io/badge/demo-%20%20%20%F0%9F%9A%80-green.svg
