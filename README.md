@@ -15,7 +15,7 @@ yarn add react-helper-hooks
 ```
 
 ## Usage
-### Comming Soon...
+- `useToggle` &mdash; handle toggle. [![][img-demo]](https://codesandbox.io/s/927kw)
 
 ## License
 
