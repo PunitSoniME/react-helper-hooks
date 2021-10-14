@@ -1,3 +1,13 @@
+## useUpdate
+
+### You can use this hook to handle debounce
+### debounce - waiting for some time once user stop typing anything
+
+<br />
+
+> Example
+
+```jsx
 import React, { useRef, useEffect } from 'react'
 
 export default function useUpdateEffect(callback, dependencies) {
@@ -11,3 +21,5 @@ export default function useUpdateEffect(callback, dependencies) {
         return callback();
     }, [dependencies]);
 }
+
+```

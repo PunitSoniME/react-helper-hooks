@@ -1,6 +1,6 @@
 {
   "name": "react-helper-hooks",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Custom React Helper Hooks",
   "author": "Punit Soni <punit.soni33@gmail.com> (http://punit-soni.web.app)",
   "license": "MIT",
@@ -16,9 +16,6 @@
   "source": "src/index.tsx",
   "engines": {
     "node": ">=10"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "react",

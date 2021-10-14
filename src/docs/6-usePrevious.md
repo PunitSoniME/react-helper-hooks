@@ -1,3 +1,12 @@
+## usePrevious
+
+### This hooks returns the previous value of defined variable
+
+<br />
+
+> Example
+
+```jsx
 import React, { useState } from "react";
 import { usePrevious } from "react-helper-hooks";
 
@@ -28,3 +37,6 @@ export default function PreviousComponent() {
     );
 }
 
+
+
+```

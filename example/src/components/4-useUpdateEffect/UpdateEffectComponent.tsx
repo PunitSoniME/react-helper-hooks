@@ -9,7 +9,7 @@ export default function UpdateEffectComponent() {
 
     return (
         <div>
-            <p>This hook will called after the value of <code>useUpdateEffect dependencies</code> changed, it will not call on first render</p>
+            <p>This hook will be called after the value of <code>useUpdateEffect dependencies</code> changed, it will not call on first render</p>
             <br />
 
             <div>{count}</div>
