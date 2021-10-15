@@ -50,3 +50,12 @@
 .card-body {
   padding: 1rem;
 }
+
+.main {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.mt- {
+  margin-top: 1rem;
+}

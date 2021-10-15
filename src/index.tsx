@@ -6,6 +6,7 @@ import useUpdateEffect from './4-useUpdate/useUpdateEffect';
 import useArray from './5-useArray/useArray';
 import usePrevious from './6-usePrevious/usePrevious';
 import useStateWithHistory from './7-useStateWithHistory/useStateWithHistory';
+import { useLocalStorage, useSessionStorage } from './8-useStorage/useStorage';
 
 export {
     useToggle,
@@ -14,5 +15,7 @@ export {
     useUpdateEffect,
     useArray,
     usePrevious,
-    useStateWithHistory
+    useStateWithHistory,
+    useLocalStorage,
+    useSessionStorage
 };

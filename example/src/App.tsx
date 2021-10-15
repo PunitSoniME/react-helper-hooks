@@ -6,6 +6,8 @@ import DebounceComponent from './components/3-useDebounce/DebounceComponent';
 import UpdateEffectComponent from './components/4-useUpdateEffect/UpdateEffectComponent';
 import ArrayComponent from './components/5-useArray/ArrayComponent';
 import PreviousComponent from './components/6-usePrevious/PreviousComponent';
+import StateWithHistoryComponent from './components/7-useStateWithHistory/StateWithHistoryComponent';
+import StorageComponent from './components/8-useStorage/StorageComponent';
 
 import './index.css';
 
@@ -43,17 +45,27 @@ const App = () => {
       key: "previous",
       component: <PreviousComponent />,
       text: "Previous Hook"
-    }
+    },
+    {
+      key: "stateWithHistory",
+      component: <StateWithHistoryComponent />,
+      text: "State With History Hook"
+    },
+    {
+      key: "storage",
+      component: <StorageComponent />,
+      text: "Storage Hook"
+    },
   ]
 
   return (
-    <div className="h-100vh w-100 flex justify-center items-center">
+    <div className="h-100vh main">
 
       <div className="flex gap-3 flex-column">
 
         {
           components.map(m => (
-            <div key={m.key} className="card">
+            <div key={m.key} className="card mt-3">
 
               <div className="card-header">
                 <h4>{m.text}</h4>
@@ -67,7 +79,6 @@ const App = () => {
           ))
         }
       </div>
-
 
     </div>
   );

@@ -11,7 +11,7 @@ export default function TimeoutComponent({ defaultTimeout }: any) {
                 This hook work just like setTimeout, however we created one single hook
                 which can also do reset and clear timeout
             </h3>
-
+            <br />
             <h4>
                 In this example, when page reloads, it will wait for 3 seconds and then
                 value will be changed to 0
@@ -24,7 +24,7 @@ export default function TimeoutComponent({ defaultTimeout }: any) {
                 If you click on Reset Timeout button, it will restart the timer of 3
                 seconds
             </h4>
-
+            <br /><br />
             <div>
                 <div>{count}</div>
                 <button onClick={() => setCount(c => c + 1)}>Increment</button>
