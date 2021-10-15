@@ -1,6 +1,7 @@
 import React from 'react'
 
 import ToggleComponent from './components/1-useToggle/ToggleComponent'
+import FetchComponent from './components/10-useFetch/FetchComponent';
 import TimeoutComponent from './components/2-useTimeout/TimeoutComponent';
 import DebounceComponent from './components/3-useDebounce/DebounceComponent';
 import UpdateEffectComponent from './components/4-useUpdateEffect/UpdateEffectComponent';
@@ -8,13 +9,12 @@ import ArrayComponent from './components/5-useArray/ArrayComponent';
 import PreviousComponent from './components/6-usePrevious/PreviousComponent';
 import StateWithHistoryComponent from './components/7-useStateWithHistory/StateWithHistoryComponent';
 import StorageComponent from './components/8-useStorage/StorageComponent';
+import AsyncComponent from './components/9-useAsync/AsyncComponent';
 
 import './index.css';
 
 const App = () => {
 
-  // const [selectedValue, setSelectedValue] = useState("toggle");
-  // const [selectedComponent, setSelectedComponent] = useState(<ToggleComponent />);
   const components = [
     {
       key: "toggle",
@@ -56,12 +56,22 @@ const App = () => {
       component: <StorageComponent />,
       text: "Storage Hook"
     },
+    {
+      key: "useAsync",
+      component: <AsyncComponent />,
+      text: "Use Async Hook"
+    },
+    {
+      key: "useFetch",
+      component: <FetchComponent />,
+      text: "Use Fetch Hook"
+    },
   ]
 
   return (
-    <div className="h-100vh main">
+    <div className="h-100vh">
 
-      <div className="flex gap-3 flex-column">
+      <div className="main">
 
         {
           components.map(m => (

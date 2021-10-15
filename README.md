@@ -31,9 +31,14 @@ yarn add react-helper-hooks
 
 - [`useStateWithHistory`](./src/docs/7-useStateWithHistory.md) &mdash; This hooks used to maintain history of any data [![][img-demo]](https://codesandbox.io/s/usestatewithhistory-pgojt)
 
-- [`useStorage`](./src/docs/7-useStorage.md) &mdash; This hooks will help you to handle localStorage and sessionStorage [![][img-demo]](https://codesandbox.io/s/usestorage-p4dnk)
+- [`useStorage`](./src/docs/8-useStorage.md) &mdash; This hooks will help you to handle localStorage and sessionStorage [![][img-demo]](https://codesandbox.io/s/usestorage-p4dnk)
+
+- [`useAsync`](./src/docs/9-useAsync.md) &mdash; This hooks will help you to handle async methods [![][img-demo]](https://codesandbox.io/s/useasync-en2ms)
+
+- [`useFetch`](./src/docs/10-useFetch.md) &mdash; This hooks will help you to handle fetch functionalities, which internally uses useAsync hook for async process [![][img-demo]](https://codesandbox.io/s/usefetch-kduom)
 
 
+<br />
 
 ### More hooks comming soon
 
