@@ -1,6 +1,9 @@
 import * as React from 'react'
 import useToggle from './1-useToggle/useToggle';
 import useFetch from './10-useFetch/useFetch';
+import useIsAppOffline from './101-useIsAppOffline/useIsAppOffline';
+import useScript from './11-useScript/useScript';
+import useEventListener from './13-useEventListener/useEventListener';
 import useTimeout from './2-useTimeout/useTimeout';
 import useDebounce from './3-useDebounce/useDebounce';
 import useUpdateEffect from './4-useUpdate/useUpdateEffect';
@@ -21,5 +24,12 @@ export {
     useLocalStorage,
     useSessionStorage,
     useAsync,
-    useFetch
+    useFetch,
+    useScript,
+    useEventListener,
+
+
+
+
+    useIsAppOffline
 };

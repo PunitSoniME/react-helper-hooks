@@ -2,6 +2,9 @@ import React from 'react'
 
 import ToggleComponent from './components/1-useToggle/ToggleComponent'
 import FetchComponent from './components/10-useFetch/FetchComponent';
+import IsAppOfflineComponent from './components/101-useIsAppOffline/IsAppOfflineComponent';
+import ScriptComponent from './components/11-useScript/ScriptComponent';
+import EventListenerComponent from './components/13-useEventListener/EventListenerComponent';
 import TimeoutComponent from './components/2-useTimeout/TimeoutComponent';
 import DebounceComponent from './components/3-useDebounce/DebounceComponent';
 import UpdateEffectComponent from './components/4-useUpdateEffect/UpdateEffectComponent';
@@ -17,42 +20,42 @@ const App = () => {
 
   const components = [
     {
-      key: "toggle",
+      key: "useToggle",
       component: <ToggleComponent />,
       text: "Toggle Hook"
     },
     {
-      key: "timeout",
+      key: "useTimeout",
       component: <TimeoutComponent defaultTimeout={3000} />,
       text: "Timeout Hook - 3 Seconds"
     },
     {
-      key: "debounce",
+      key: "useDebounce",
       component: <DebounceComponent />,
       text: "Debounce Hook"
     },
     {
-      key: "update-effect",
+      key: "useUpdateEffect",
       component: <UpdateEffectComponent />,
       text: "Update EffectHook"
     },
     {
-      key: "array",
+      key: "useArray",
       component: <ArrayComponent />,
       text: "Array Hook"
     },
     {
-      key: "previous",
+      key: "usePrevious",
       component: <PreviousComponent />,
       text: "Previous Hook"
     },
     {
-      key: "stateWithHistory",
+      key: "useStateWithHistory",
       component: <StateWithHistoryComponent />,
       text: "State With History Hook"
     },
     {
-      key: "storage",
+      key: "useStorage",
       component: <StorageComponent />,
       text: "Storage Hook"
     },
@@ -65,6 +68,21 @@ const App = () => {
       key: "useFetch",
       component: <FetchComponent />,
       text: "Use Fetch Hook"
+    },
+    {
+      key: "useScript",
+      component: <ScriptComponent />,
+      text: "Use Script Hook"
+    },
+    {
+      key: "useEventListener",
+      component: <EventListenerComponent />,
+      text: "Use EventListener Hook"
+    },
+    {
+      key: "useIsAppOffline",
+      component: <IsAppOfflineComponent />,
+      text: "Use IsAppOffline Hook"
     },
   ]
 

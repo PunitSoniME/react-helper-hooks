@@ -40,6 +40,10 @@
   justify-content: center;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-3 {
   gap: 1rem;
 }
@@ -61,4 +65,18 @@
 
 .mt-1 {
   margin-top: 1rem;
+}
+
+.online {
+  height: 15px;
+  width: 15px;
+  background-color: rgb(67, 196, 67);
+  border-radius: 50%;
+}
+
+.offline {
+  height: 15px;
+  width: 15px;
+  background-color: rgba(219, 55, 55, 0.877);
+  border-radius: 50%;
 }

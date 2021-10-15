@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback, useState } from 'react'
 
-export default function useAsync(callback, dependencies = []) {
+export default function useAsync(callback, dependencies: any = []) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState();
     const [value, setValue] = useState();
