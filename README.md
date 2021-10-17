@@ -43,7 +43,7 @@ yarn add react-helper-hooks
 
 - [`useIsAppOffline`](./src/docs/101-useIsAppOffline.md) &mdash; This hook will help you to know your application is running of active internet or you are offline [![][img-demo]](https://codesandbox.io/s/useisappoffline-1tgjf)
 
-
+- [`useWindowDimensions`](./src/docs/102-useWindowDimensions.md) &mdash; This hook will help you to get the height, width, dimensions of browser, You can check either device is mobile or laptop or tablet or desktop or extra large device [![][img-demo]](https://codesandbox.io/s/usewindowdimensions-dyhep)
 
 
 
