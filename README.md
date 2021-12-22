@@ -47,6 +47,9 @@ yarn add react-helper-hooks
 
 - [`useWindowDimensions`](./src/docs/102-useWindowDimensions.md) &mdash; This hook will help you to get the height, width, dimensions of browser, You can check either device is mobile or laptop or tablet or desktop or extra large device [![][img-demo]](https://codesandbox.io/s/usewindowdimensions-dyhep)
 
+- [`useAsyncLoop`](./src/docs/104-useAsyncLoop.md) &mdash; This hook will help you to get the height, width, dimensions of browser, You can check either device is mobile or laptop or tablet or desktop or extra large device [![][img-demo]](https://codesandbox.io/s/useasyncloop-t53pw)
+
+- [`useWindowFocus`](./src/docs/105-useWindowFocus.md) &mdash; This hook will help you to hide/show the sensitive information. Below example will help you to understand [![][img-demo]](https://codesandbox.io/s/usewindowfocus-kk282)
 
 
 <br />
