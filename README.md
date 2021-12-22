@@ -41,6 +41,8 @@ yarn add react-helper-hooks
 
 - [`useEventListener`](./src/docs/13-useEventListener.md) &mdash; This hook will help you to handle eventListener functionalities [![][img-demo]](https://codesandbox.io/s/useeventlistener-l5wy6)
 
+- [`useGeolocation`](./src/docs/17-useGeolocation.md) &mdash; This hook will help you to get latitude and longitude of user [![][img-demo]](https://codesandbox.io/s/usegeolocation-uyo9y)
+
 - [`useIsAppOffline`](./src/docs/101-useIsAppOffline.md) &mdash; This hook will help you to know your application is running of active internet or you are offline [![][img-demo]](https://codesandbox.io/s/useisappoffline-1tgjf)
 
 - [`useWindowDimensions`](./src/docs/102-useWindowDimensions.md) &mdash; This hook will help you to get the height, width, dimensions of browser, You can check either device is mobile or laptop or tablet or desktop or extra large device [![][img-demo]](https://codesandbox.io/s/usewindowdimensions-dyhep)
@@ -56,8 +58,7 @@ yarn add react-helper-hooks
 ---------------
 
 ### I want to give special thanks to Kyle cook of [Web Dev Simplified](https://twitter.com/DevSimplified) [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/bukotsunikki.svg?style=social&label=Follow@DevSimplified)](https://twitter.com/DevSimplified)
-### I got inspiration from his youtube videos and and created a npm/yarn package from his custom react hooks videos
-### I will try to add his custom react hooks as well as my custom hooks.
+### I got inspiration from his youtube videos.
 
 <br />
 

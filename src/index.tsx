@@ -3,9 +3,11 @@ import useToggle from './1-useToggle/useToggle';
 import useFetch from './10-useFetch/useFetch';
 import useIsAppOffline from './101-useIsAppOffline/useIsAppOffline';
 import useWindowDimensions from './102-useWindowDimensions/useWindowDimensions';
+import useAsyncLoop from './104-useAsyncLoop/useAsyncLoop';
+import useWindowFocus from './105-useWindowFocus/useWindowFocus';
 import useScript from './11-useScript/useScript';
 import useEventListener from './13-useEventListener/useEventListener';
-import useOnScreen from './14-useOnScreen/useOnScreen';
+import useGeolocation from './17-useGeolocation/useGeolocation';
 import useTimeout from './2-useTimeout/useTimeout';
 import useDebounce from './3-useDebounce/useDebounce';
 import useUpdateEffect from './4-useUpdate/useUpdateEffect';
@@ -29,11 +31,12 @@ export {
     useFetch,
     useScript,
     useEventListener,
-    useOnScreen,
-
+    useGeolocation,
 
 
 
     useIsAppOffline,
-    useWindowDimensions
+    useWindowDimensions,
+    useAsyncLoop,
+    useWindowFocus
 };

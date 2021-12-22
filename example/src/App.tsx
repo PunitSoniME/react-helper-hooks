@@ -4,9 +4,11 @@ import ToggleComponent from './components/1-useToggle/ToggleComponent'
 import FetchComponent from './components/10-useFetch/FetchComponent';
 import IsAppOfflineComponent from './components/101-useIsAppOffline/IsAppOfflineComponent';
 import WindowDimensionsComponent from './components/102-useWindowDimensions/WindowDimensionsComponent';
+import AsyncLoopComponent from './components/104-useAsyncLoop/AsyncLoopComponent';
+import WindowFocusComponent from './components/105-useWindowFocus/WindowFocusComponent';
 import ScriptComponent from './components/11-useScript/ScriptComponent';
 import EventListenerComponent from './components/13-useEventListener/EventListenerComponent';
-import OnScreenComponent from './components/14-useOnScreen/OnScreenComponent';
+import GeolocationComponent from './components/17-useGeolocation/GeolocationComponent';
 import TimeoutComponent from './components/2-useTimeout/TimeoutComponent';
 import DebounceComponent from './components/3-useDebounce/DebounceComponent';
 import UpdateEffectComponent from './components/4-useUpdateEffect/UpdateEffectComponent';
@@ -82,11 +84,6 @@ const App = () => {
       text: "Use EventListener Hook"
     },
     {
-      key: "useOnScreen",
-      component: <OnScreenComponent />,
-      text: "Use OnScreen Hook"
-    },
-    {
       key: "useIsAppOffline",
       component: <IsAppOfflineComponent />,
       text: "Use IsAppOffline Hook"
@@ -95,6 +92,21 @@ const App = () => {
       key: "useWindowDimensions",
       component: <WindowDimensionsComponent />,
       text: "Use WindowDimensions Hook"
+    },
+    {
+      key: "useGeolocation",
+      component: <GeolocationComponent />,
+      text: "Use GoeLocation Hook"
+    },
+    {
+      key: "useAsyncLoop",
+      component: <AsyncLoopComponent />,
+      text: "Use AsyncLoop Hook"
+    },
+    {
+      key: "useWindowFocus",
+      component: <WindowFocusComponent />,
+      text: "Use WindowFocus Hook"
     },
   ]
 
