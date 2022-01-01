@@ -5,9 +5,11 @@ import useIsAppOffline from './101-useIsAppOffline/useIsAppOffline';
 import useWindowDimensions from './102-useWindowDimensions/useWindowDimensions';
 import useAsyncLoop from './104-useAsyncLoop/useAsyncLoop';
 import useWindowFocus from './105-useWindowFocus/useWindowFocus';
+import useSubdomain from './106-useSubdomain/useSubdomain';
 import useScript from './11-useScript/useScript';
 import useEventListener from './13-useEventListener/useEventListener';
 import useGeolocation from './17-useGeolocation/useGeolocation';
+import useCopyToClipboard from './18-useCopyToClipboard/useCopyToClipboard';
 import useTimeout from './2-useTimeout/useTimeout';
 import useDebounce from './3-useDebounce/useDebounce';
 import useUpdateEffect from './4-useUpdate/useUpdateEffect';
@@ -32,11 +34,13 @@ export {
     useScript,
     useEventListener,
     useGeolocation,
+    useCopyToClipboard,
 
 
 
     useIsAppOffline,
     useWindowDimensions,
     useAsyncLoop,
-    useWindowFocus
+    useWindowFocus,
+    useSubdomain
 };
