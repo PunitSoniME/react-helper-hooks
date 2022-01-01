@@ -6,9 +6,11 @@ import IsAppOfflineComponent from './components/101-useIsAppOffline/IsAppOffline
 import WindowDimensionsComponent from './components/102-useWindowDimensions/WindowDimensionsComponent';
 import AsyncLoopComponent from './components/104-useAsyncLoop/AsyncLoopComponent';
 import WindowFocusComponent from './components/105-useWindowFocus/WindowFocusComponent';
+import SubdomainComponent from './components/106-useSubdomain/SubdomainComponent';
 import ScriptComponent from './components/11-useScript/ScriptComponent';
 import EventListenerComponent from './components/13-useEventListener/EventListenerComponent';
 import GeolocationComponent from './components/17-useGeolocation/GeolocationComponent';
+import CopyToClipboardComponent from './components/18-useCopyToClipboard/CopyToClipboardComponent';
 import TimeoutComponent from './components/2-useTimeout/TimeoutComponent';
 import DebounceComponent from './components/3-useDebounce/DebounceComponent';
 import UpdateEffectComponent from './components/4-useUpdateEffect/UpdateEffectComponent';
@@ -108,6 +110,17 @@ const App = () => {
       component: <WindowFocusComponent />,
       text: "Use WindowFocus Hook"
     },
+    {
+      key: "useSubdmoain",
+      component: <SubdomainComponent />,
+      text: "Use Subdomain Hook"
+    },
+    {
+      key: "useCopyToClipboard",
+      component: <CopyToClipboardComponent />,
+      text: "Use CopyToClipboard Hook"
+    },
+
   ]
 
   return (

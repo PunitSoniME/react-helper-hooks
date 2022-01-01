@@ -25,7 +25,7 @@ export default function AsyncLoopComponent() {
         await executeLoop(data, async (d) => {
             await fetch(d).then((response) => {
                 if (response.status !== 200) {
-                    console.log('Looks like there was a problem. Status Code: ' +
+                    console.error('Looks like there was a problem. Status Code: ' +
                         response.status);
                     return;
                 }

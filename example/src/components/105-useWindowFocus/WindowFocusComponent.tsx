@@ -1,7 +1,7 @@
 import React from 'react'
 import { useWindowFocus } from 'react-helper-hooks';
 
-export default function WindowFocus() {
+export default function WindowFocusComponent() {
     const windowFocus = useWindowFocus();
 
     return (
