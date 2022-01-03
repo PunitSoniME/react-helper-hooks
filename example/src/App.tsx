@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment, useState } from 'react'
 
 import ToggleComponent from './components/1-useToggle/ToggleComponent'
 import FetchComponent from './components/10-useFetch/FetchComponent';
@@ -7,6 +7,7 @@ import WindowDimensionsComponent from './components/102-useWindowDimensions/Wind
 import AsyncLoopComponent from './components/104-useAsyncLoop/AsyncLoopComponent';
 import WindowFocusComponent from './components/105-useWindowFocus/WindowFocusComponent';
 import SubdomainComponent from './components/106-useSubdomain/SubdomainComponent';
+import StateJsonComponent from './components/107-useStateJson/StateJsonComponent';
 import ScriptComponent from './components/11-useScript/ScriptComponent';
 import EventListenerComponent from './components/13-useEventListener/EventListenerComponent';
 import GeolocationComponent from './components/17-useGeolocation/GeolocationComponent';
@@ -120,29 +121,44 @@ const App = () => {
       component: <CopyToClipboardComponent />,
       text: "Use CopyToClipboard Hook"
     },
-
+    {
+      key: "useStateJson",
+      component: <StateJsonComponent />,
+      text: "Use StateJson Hook"
+    },
   ]
 
+  const [selectedItem, setSelectedItem] = useState<any>(components[0])
+
   return (
-    <div className="h-100vh">
+    <div className="h-100vh main">
 
-      <div className="main">
-
+      <div className="flex gap-3 flex-wrap">
         {
           components.map(m => (
-            <div key={m.key} className="card mt-3">
-
-              <div className="card-header">
-                <h4>{m.text}</h4>
+            <Fragment key={m.key}>
+              <div className="flex gap-2">
+                <input type="radio" checked={selectedItem.key === m.key} name="components" id={m.key} key={m.key} value={m.key} onChange={(d: any) => {
+                  setSelectedItem(components.find(dd => dd.key === d.target.value))
+                }} />
+                <label htmlFor={m.key}>{m.text}</label>
               </div>
-
-              <div className="card-body">
-                {m.component}
-              </div>
-
-            </div>
+            </Fragment>
           ))
         }
+      </div>
+
+
+      <div className="card mt-3">
+
+        <div className="card-header">
+          <h4>{selectedItem.text} - ( Hook: {selectedItem.key} )</h4>
+        </div>
+
+        <div className="card-body">
+          {selectedItem.component}
+        </div>
+
       </div>
 
     </div>

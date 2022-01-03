@@ -2,11 +2,21 @@ import React from 'react'
 
 export default function useCopyToClipboard() {
     const copyToClipboard = async (textToCopy) => {
-        try {
-            await navigator.clipboard.writeText(textToCopy);
-        } catch (error) {
-            console.error("Error in copy - ", error.message);
-        }
+
+        return new Promise(async (resolve, reject) => {
+            if (!navigator.clipboard) {
+                reject("Clipboard API is not supported in this browser");
+            } else {
+                try {
+                    await navigator.clipboard.writeText(textToCopy);
+                    resolve("Copied to clipboard");
+                } catch (error) {
+                    reject(error.message)
+                }
+            }
+        })
+
+
     }
 
     return copyToClipboard;

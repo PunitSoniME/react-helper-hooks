@@ -96,6 +96,9 @@ yarn add react-helper-hooks
 
 -----------------------------
 
+- [`useStateJson`](./src/docs/107-useStateJson.md) &mdash; A hook that stores a state as a JSON string to prevent unnecessary render updates. [![][img-demo]](https://codesandbox.io/s/usestatejson-u3i0r)
+
+-----------------------------
 
 <br />
 

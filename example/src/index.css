@@ -17,11 +17,15 @@
 }
 
 .main {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 1rem; */
   width: 90%;
-  margin: 0 auto;
+  margin: 2rem auto;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .flex-column {
@@ -65,6 +69,14 @@
 
 .mt-1 {
   margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 1.5rem;
+}
+
+.mt-3 {
+  margin-top: 2rem;
 }
 
 .online {

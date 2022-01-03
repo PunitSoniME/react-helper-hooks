@@ -6,6 +6,7 @@ import useWindowDimensions from './102-useWindowDimensions/useWindowDimensions';
 import useAsyncLoop from './104-useAsyncLoop/useAsyncLoop';
 import useWindowFocus from './105-useWindowFocus/useWindowFocus';
 import useSubdomain from './106-useSubdomain/useSubdomain';
+import useStateJson from './107-useStateJson/useStateJson';
 import useScript from './11-useScript/useScript';
 import useEventListener from './13-useEventListener/useEventListener';
 import useGeolocation from './17-useGeolocation/useGeolocation';
@@ -42,5 +43,6 @@ export {
     useWindowDimensions,
     useAsyncLoop,
     useWindowFocus,
-    useSubdomain
+    useSubdomain,
+    useStateJson
 };

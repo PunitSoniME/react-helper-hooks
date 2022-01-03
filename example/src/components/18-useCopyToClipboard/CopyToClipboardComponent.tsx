@@ -14,8 +14,11 @@ export default function CopyToClipboardComponent() {
             <button
                 type="button"
                 onClick={() => {
-                    copyToClipboard(textToCopy);
-                    alert("Copied to clipboard");
+                    copyToClipboard(textToCopy).then(() => {
+                        alert("Copied to clipboard");
+                    }).catch((error) => {
+                        alert(error)
+                    });
                 }}
             >
                 Click to copy
