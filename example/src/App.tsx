@@ -8,6 +8,7 @@ import AsyncLoopComponent from './components/104-useAsyncLoop/AsyncLoopComponent
 import WindowFocusComponent from './components/105-useWindowFocus/WindowFocusComponent';
 import SubdomainComponent from './components/106-useSubdomain/SubdomainComponent';
 import StateJsonComponent from './components/107-useStateJson/StateJsonComponent';
+import ColorBlendComponent from './components/108-useColorBlend/ColorBlendComponent';
 import ScriptComponent from './components/11-useScript/ScriptComponent';
 import EventListenerComponent from './components/13-useEventListener/EventListenerComponent';
 import GeolocationComponent from './components/17-useGeolocation/GeolocationComponent';
@@ -126,9 +127,14 @@ const App = () => {
       component: <StateJsonComponent />,
       text: "Use StateJson Hook"
     },
+    {
+      key: "useColorBlend",
+      component: <ColorBlendComponent />,
+      text: "Use ColorBlend Hook"
+    },
   ]
 
-  const [selectedItem, setSelectedItem] = useState<any>(components[0])
+  const [selectedItem, setSelectedItem] = useState<any>(components[components.length - 1])
 
   return (
     <div className="h-100vh main">
