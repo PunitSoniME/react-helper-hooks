@@ -101,7 +101,7 @@ yarn add react-helper-hooks
 -----------------------------
 
 
-- [`useColorBlend`](./src/docs/108-useColorBlend.md) &mdash; A hook that stores a state as a JSON string to prevent unnecessary render updates. [![][img-demo]](https://codesandbox.io/s/usecolorblend-781bv)
+- [`useColorBlend`](./src/docs/108-useColorBlend.md) &mdash; A hook that generates blend color by passing 2 array [![][img-demo]](https://codesandbox.io/s/usecolorblend-781bv)
 
 -----------------------------
 
