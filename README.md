@@ -105,6 +105,11 @@ yarn add react-helper-hooks
 
 -----------------------------
 
+
+- [`useGroupByFirstLetter`](./src/docs/109-useGroupByFirstLetter.md) &mdash; A hook that helps you to group by the data by first letter [![][img-demo]](https://codesandbox.io/s/usegroupbyfirstletter-wow78n)
+
+-----------------------------
+
 <br />
 
 ### More hooks comming soon

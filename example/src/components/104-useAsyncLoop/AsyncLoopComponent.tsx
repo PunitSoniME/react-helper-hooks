@@ -18,7 +18,7 @@ export default function AsyncLoopComponent() {
                 if (response.status !== 200) {
                     console.error('Looks like there was a problem. Status Code: ' +
                         response.status);
-                    return;
+                    return null;
                 }
 
                 return response.json().then(function (data) {

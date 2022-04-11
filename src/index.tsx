@@ -8,6 +8,7 @@ import useWindowFocus from './105-useWindowFocus/useWindowFocus';
 import useSubdomain from './106-useSubdomain/useSubdomain';
 import useStateJson from './107-useStateJson/useStateJson';
 import useColorBlend from './108-useColorBlend/useColorBlend';
+import useGroupByFirstLetter from './109-useGroupByFirstLetter/useGroupByFirstLetter';
 import useScript from './11-useScript/useScript';
 import useEventListener from './13-useEventListener/useEventListener';
 import useGeolocation from './17-useGeolocation/useGeolocation';
@@ -46,5 +47,6 @@ export {
     useWindowFocus,
     useSubdomain,
     useStateJson,
-    useColorBlend
+    useColorBlend,
+    useGroupByFirstLetter
 };

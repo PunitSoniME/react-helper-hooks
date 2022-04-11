@@ -9,6 +9,7 @@ import WindowFocusComponent from './components/105-useWindowFocus/WindowFocusCom
 import SubdomainComponent from './components/106-useSubdomain/SubdomainComponent';
 import StateJsonComponent from './components/107-useStateJson/StateJsonComponent';
 import ColorBlendComponent from './components/108-useColorBlend/ColorBlendComponent';
+import GroupByFirstLetterComponent from './components/109-useGroupByFirstLetter/GroupByFirstLetterComponent';
 import ScriptComponent from './components/11-useScript/ScriptComponent';
 import EventListenerComponent from './components/13-useEventListener/EventListenerComponent';
 import GeolocationComponent from './components/17-useGeolocation/GeolocationComponent';
@@ -131,6 +132,11 @@ const App = () => {
       key: "useColorBlend",
       component: <ColorBlendComponent />,
       text: "Use ColorBlend Hook"
+    },
+    {
+      key: "useGroupByFirstLetter",
+      component: <GroupByFirstLetterComponent />,
+      text: "Use GroupByFirstLetter Hook"
     },
   ]
 
