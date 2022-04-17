@@ -15,7 +15,7 @@ export default function ColorBlendComponent() {
 
     useEffect(() => {
         setGroupByData(groupByFirstLetter(data, 'name'))
-    }, [])
+    }, [groupByFirstLetter])
 
     return (
         <div style={{ display: "flex", gap: "1rem", flexDirection: "column" }}>
