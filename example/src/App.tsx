@@ -1,29 +1,29 @@
-import React, { Fragment, useState } from 'react'
-
-import ToggleComponent from './components/1-useToggle/ToggleComponent'
-import FetchComponent from './components/10-useFetch/FetchComponent';
-import IsAppOfflineComponent from './components/101-useIsAppOffline/IsAppOfflineComponent';
-import WindowDimensionsComponent from './components/102-useWindowDimensions/WindowDimensionsComponent';
-import AsyncLoopComponent from './components/104-useAsyncLoop/AsyncLoopComponent';
-import WindowFocusComponent from './components/105-useWindowFocus/WindowFocusComponent';
-import SubdomainComponent from './components/106-useSubdomain/SubdomainComponent';
-import StateJsonComponent from './components/107-useStateJson/StateJsonComponent';
-import ColorBlendComponent from './components/108-useColorBlend/ColorBlendComponent';
-import GroupByFirstLetterComponent from './components/109-useGroupByFirstLetter/GroupByFirstLetterComponent';
-import ScriptComponent from './components/11-useScript/ScriptComponent';
-import EventListenerComponent from './components/13-useEventListener/EventListenerComponent';
-import GeolocationComponent from './components/17-useGeolocation/GeolocationComponent';
-import CopyToClipboardComponent from './components/18-useCopyToClipboard/CopyToClipboardComponent';
-import TimeoutComponent from './components/2-useTimeout/TimeoutComponent';
-import DebounceComponent from './components/3-useDebounce/DebounceComponent';
-import UpdateEffectComponent from './components/4-useUpdateEffect/UpdateEffectComponent';
-import ArrayComponent from './components/5-useArray/ArrayComponent';
-import PreviousComponent from './components/6-usePrevious/PreviousComponent';
-import StateWithHistoryComponent from './components/7-useStateWithHistory/StateWithHistoryComponent';
-import StorageComponent from './components/8-useStorage/StorageComponent';
-import AsyncComponent from './components/9-useAsync/AsyncComponent';
-
+import React, { lazy, Suspense, Fragment, useState } from 'react'
 import './index.css';
+
+const ToggleComponent = lazy(() => import('./components/1-useToggle/ToggleComponent'));
+const FetchComponent = lazy(() => import('./components/10-useFetch/FetchComponent'));
+const IsAppOfflineComponent = lazy(() => import('./components/101-useIsAppOffline/IsAppOfflineComponent'));
+const WindowDimensionsComponent = lazy(() => import('./components/102-useWindowDimensions/WindowDimensionsComponent'));
+const AsyncLoopComponent = lazy(() => import('./components/104-useAsyncLoop/AsyncLoopComponent'));
+const WindowFocusComponent = lazy(() => import('./components/105-useWindowFocus/WindowFocusComponent'));
+const SubdomainComponent = lazy(() => import('./components/106-useSubdomain/SubdomainComponent'));
+const StateJsonComponent = lazy(() => import('./components/107-useStateJson/StateJsonComponent'));
+const ColorBlendComponent = lazy(() => import('./components/108-useColorBlend/ColorBlendComponent'));
+const GroupByFirstLetterComponent = lazy(() => import('./components/109-useGroupByFirstLetter/GroupByFirstLetterComponent'));
+const ScriptComponent = lazy(() => import('./components/11-useScript/ScriptComponent'));
+const ScrollToTopComponent = lazy(() => import('./components/110-useScrollToTop/ScrollToTopComponent'));
+const EventListenerComponent = lazy(() => import('./components/13-useEventListener/EventListenerComponent'));
+const GeolocationComponent = lazy(() => import('./components/17-useGeolocation/GeolocationComponent'));
+const CopyToClipboardComponent = lazy(() => import('./components/18-useCopyToClipboard/CopyToClipboardComponent'));
+const TimeoutComponent = lazy(() => import('./components/2-useTimeout/TimeoutComponent'));
+const DebounceComponent = lazy(() => import('./components/3-useDebounce/DebounceComponent'));
+const UpdateEffectComponent = lazy(() => import('./components/4-useUpdateEffect/UpdateEffectComponent'));
+const ArrayComponent = lazy(() => import('./components/5-useArray/ArrayComponent'));
+const PreviousComponent = lazy(() => import('./components/6-usePrevious/PreviousComponent'));
+const StateWithHistoryComponent = lazy(() => import('./components/7-useStateWithHistory/StateWithHistoryComponent'));
+const StorageComponent = lazy(() => import('./components/8-useStorage/StorageComponent'));
+const AsyncComponent = lazy(() => import('./components/9-useAsync/AsyncComponent'));
 
 const App = () => {
 
@@ -138,6 +138,11 @@ const App = () => {
       component: <GroupByFirstLetterComponent />,
       text: "Use GroupByFirstLetter Hook"
     },
+    {
+      key: "useScrollToTop",
+      component: <ScrollToTopComponent />,
+      text: "Use ScrollToTop Hook"
+    },
   ]
 
   const [selectedItem, setSelectedItem] = useState<any>(components[components.length - 1])
@@ -168,7 +173,9 @@ const App = () => {
         </div>
 
         <div className="card-body">
-          {selectedItem.component}
+          <Suspense fallback="Loading...">
+            {selectedItem.component}
+          </Suspense>
         </div>
 
       </div>

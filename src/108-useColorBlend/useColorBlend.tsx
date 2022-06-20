@@ -16,5 +16,5 @@ export default function useColorBlend(rgbA, rgbB) {
     const g = colorChannelMixer(rgbA[1], rgbB[1]);
     const b = colorChannelMixer(rgbA[2], rgbB[2]);
 
-    return [r, g, b]
+    return [r, g, b];
 }

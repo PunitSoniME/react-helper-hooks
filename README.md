@@ -110,6 +110,11 @@ yarn add react-helper-hooks
 
 -----------------------------
 
+
+- [`useScrollToTop`](./src/docs/110-useScrollToTop.md) &mdash; A hook that helps you to scroll to top with smooth transition [![][img-demo]](https://codesandbox.io/s/usescrolltotop-g539ex)
+
+-----------------------------
+
 <br />
 
 ### More hooks comming soon

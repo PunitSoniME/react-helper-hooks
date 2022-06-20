@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment } from 'react'
 import { useGroupByFirstLetter } from 'react-helper-hooks';
 
 const data = ["A", "AA", "B", "BB", "C", "CC", "D", "DD"].map((m, index) => {
@@ -8,14 +8,10 @@ const data = ["A", "AA", "B", "BB", "C", "CC", "D", "DD"].map((m, index) => {
     }
 })
 
-export default function ColorBlendComponent() {
+export default function GroupByFirstLetterComponent() {
 
     const { groupByFirstLetter } = useGroupByFirstLetter();
-    const [groupByData, setGroupByData] = useState([]);
-
-    useEffect(() => {
-        setGroupByData(groupByFirstLetter(data, 'name'))
-    }, [groupByFirstLetter])
+    const groupByData = groupByFirstLetter(data, 'name') as any[];
 
     return (
         <div style={{ display: "flex", gap: "1rem", flexDirection: "column" }}>

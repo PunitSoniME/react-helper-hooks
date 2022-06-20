@@ -10,6 +10,7 @@ import useStateJson from './107-useStateJson/useStateJson';
 import useColorBlend from './108-useColorBlend/useColorBlend';
 import useGroupByFirstLetter from './109-useGroupByFirstLetter/useGroupByFirstLetter';
 import useScript from './11-useScript/useScript';
+import useScrollToTop from './110-useScrollToTop/useScrollToTop';
 import useEventListener from './13-useEventListener/useEventListener';
 import useGeolocation from './17-useGeolocation/useGeolocation';
 import useCopyToClipboard from './18-useCopyToClipboard/useCopyToClipboard';
@@ -48,5 +49,6 @@ export {
     useSubdomain,
     useStateJson,
     useColorBlend,
-    useGroupByFirstLetter
+    useGroupByFirstLetter,
+    useScrollToTop
 };
