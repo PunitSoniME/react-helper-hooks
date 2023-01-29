@@ -9,7 +9,7 @@
 > Example
 
 ```jsx
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useStateJson } from 'react-helper-hooks';
 
 export default function StateJsonComponent() {

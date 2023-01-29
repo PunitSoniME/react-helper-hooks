@@ -7,7 +7,7 @@
 > Example
 
 ```jsx
-import React, { Fragment, useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { useGroupByFirstLetter } from 'react-helper-hooks';
 
 const data = ["A", "AA", "B", "BB", "C", "CC", "D", "DD"].map((m, index) => {

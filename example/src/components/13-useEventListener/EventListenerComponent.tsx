@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useEventListener } from 'react-helper-hooks';
 
 export default function EventListenerComponent() {

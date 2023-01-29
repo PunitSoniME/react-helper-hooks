@@ -8,7 +8,7 @@
 > Example
 
 ```jsx
-import React, { useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 
 export default function useUpdateEffect(callback, dependencies) {
     const firstRendererRef = useRef(true);

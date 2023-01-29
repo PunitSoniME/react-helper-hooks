@@ -7,7 +7,7 @@
 > Example
 
 ```jsx
-import React from 'react'
+ 
 import { useWindowFocus } from 'react-helper-hooks';
 
 export default function WindowFocus() {

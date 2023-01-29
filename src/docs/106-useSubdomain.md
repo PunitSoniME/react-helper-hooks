@@ -7,7 +7,7 @@
 > Example
 
 ```jsx
-import React from 'react'
+ 
 import { useSubdomain } from 'react-helper-hooks';
 
 export default function SubdomainComponent() {

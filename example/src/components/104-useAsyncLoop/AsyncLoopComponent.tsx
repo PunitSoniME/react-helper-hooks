@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react'
+import { useEffect, useCallback } from 'react'
 import { useAsyncLoop } from 'react-helper-hooks';
 
 export default function AsyncLoopComponent() {
