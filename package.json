@@ -1,6 +1,6 @@
 {
   "name": "react-helper-hooks",
-  "version": "1.7.0",
+  "version": "1.8.1",
   "description": "Custom React Helper Hooks",
   "author": "Punit Soni <punit.soni33@gmail.com> (https://punit-soni.web.app)",
   "license": "MIT",
@@ -35,10 +35,7 @@
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build",
-    "patch": "yarn run lint && npm version patch && git push",
-    "minor": "yarn run lint && npm version minor && git push",
-    "major": "yarn run lint && npm version major && git push"
+    "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
     "react": "^16.0.0"
