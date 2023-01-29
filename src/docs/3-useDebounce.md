@@ -8,7 +8,7 @@
 > Example
 
 ```jsx
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useDebounce } from 'react-helper-hooks';
 
 export default function DebounceComponent() {

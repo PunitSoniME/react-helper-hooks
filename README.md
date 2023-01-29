@@ -4,7 +4,23 @@
 
 <br />
 
-[![NPM](https://img.shields.io/npm/v/react-helper-hooks.svg)](https://www.npmjs.com/package/react-helper-hooks) ![npm](https://img.shields.io/npm/dw/react-helper-hooks) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![npm version](https://badge.fury.io/js/react-helper-hooks.svg)][npm_url]
+[![license](https://img.shields.io/npm/l/react-helper-hooks.svg)][npm_url]
+![Types Included](https://badgen.net/npm/types/react-helper-hooks)
+
+![dependents](https://badgen.net/npm/dependents/react-helper-hooks)
+[![weekly downloads](https://badgen.net/npm/dw/react-helper-hooks)][npm_url]
+[![weekly downloads](https://badgen.net/npm/dm/react-helper-hooks)][npm_url]
+[![downloads](https://img.shields.io/npm/dt/react-helper-hooks.svg)][npm_url]
+![jsDelivr](https://badgen.net/jsdelivr/hits/npm/react-helper-hooks)
+
+![Dependency Count](https://badgen.net/bundlephobia/dependency-count/react-helper-hooks)
+
+![minified](https://badgen.net/bundlephobia/min/react-helper-hooks)
+![gzip](https://badgen.net/bundlephobia/minzip/react-helper-hooks)
+
+
+[npm_url]: https://www.npmjs.org/package/react-helper-hooks
 
 ## Install
 

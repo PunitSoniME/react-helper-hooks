@@ -7,7 +7,7 @@
 > Example
 
 ```jsx
-import React from 'react'
+ 
 import { useArray } from 'react-helper-hooks';
 
 export default function ArrayComponent() {

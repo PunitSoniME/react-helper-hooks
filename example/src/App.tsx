@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, Fragment, useState } from 'react'
+import { lazy, Suspense, Fragment, useState } from 'react'
 import './index.css';
 
 const ToggleComponent = lazy(() => import('./components/1-useToggle/ToggleComponent'));

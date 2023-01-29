@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useTimeout } from 'react-helper-hooks';
 
 export default function TimeoutComponent({ defaultTimeout }: any) {

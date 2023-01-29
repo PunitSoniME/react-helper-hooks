@@ -7,7 +7,7 @@
 > Example
 
 ```jsx
-import React, { useState } from "react";
+import { useState } from "react";
 import { usePrevious } from "react-helper-hooks";
 
 export default function PreviousComponent() {

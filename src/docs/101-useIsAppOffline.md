@@ -7,7 +7,7 @@
 > Example
 
 ```jsx
-import React from 'react'
+ 
 import { useIsAppOffline } from 'react-helper-hooks';
 
 export default function IsAppOfflineComponent() {

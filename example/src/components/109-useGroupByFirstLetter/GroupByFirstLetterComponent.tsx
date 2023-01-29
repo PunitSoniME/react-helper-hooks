@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import { Fragment } from 'react'
 import { useGroupByFirstLetter } from 'react-helper-hooks';
 
 const data = ["A", "AA", "B", "BB", "C", "CC", "D", "DD"].map((m, index) => {

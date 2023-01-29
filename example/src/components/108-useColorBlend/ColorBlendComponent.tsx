@@ -1,4 +1,4 @@
-import React from 'react'
+ 
 import { useColorBlend } from 'react-helper-hooks';
 
 export default function ColorBlendComponent() {

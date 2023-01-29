@@ -7,7 +7,7 @@
 > Example
 
 ```jsx
-import React from 'react'
+ 
 import { useWindowDimensions } from 'react-helper-hooks';
 
 export default function WindowDimensionsComponent() {
