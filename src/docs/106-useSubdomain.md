@@ -8,7 +8,7 @@
 
 ```jsx
  
-import { useSubdomain } from 'react-helper-hooks';
+import { useSubdomain } from '../../../.';
 
 export default function SubdomainComponent() {
     //  Url example - https://blog.myblog.com

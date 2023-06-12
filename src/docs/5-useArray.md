@@ -8,7 +8,7 @@
 
 ```jsx
  
-import { useArray } from 'react-helper-hooks';
+import { useArray } from '../../../.';
 
 export default function ArrayComponent() {
 

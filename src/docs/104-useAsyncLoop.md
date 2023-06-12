@@ -8,7 +8,7 @@
 
 ```jsx
 import { useEffect, useCallback } from 'react'
-import { useAsyncLoop } from 'react-helper-hooks';
+import { useAsyncLoop } from '../../../.';
 
 export default function AsyncLoopComponent() {
     const executeLoop = useAsyncLoop();

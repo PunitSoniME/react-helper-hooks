@@ -8,7 +8,7 @@
 
 ```jsx
  
-import { useScript } from 'react-helper-hooks';
+import { useScript } from '../../../.';
 
 export default function ScriptComponent() {
     const { loading, error } = useScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js");

@@ -1,32 +1,5 @@
 {
-  "compilerOptions": {
-    "outDir": "dist",
-    "module": "esnext",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
-    "moduleResolution": "node",
-    "jsx": "react",
-    "sourceMap": false,
-    "declaration": true,
-    "esModuleInterop": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": false,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    "allowSyntheticDefaultImports": true,
-    "isolatedModules": true
-  },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "example"
-  ]
+  // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
+  "extends": "@tsconfig/vite-react/tsconfig.json",
+  "include": ["src", "types"]
 }

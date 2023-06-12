@@ -8,7 +8,7 @@
 
 ```jsx
  
-import { useWindowFocus } from 'react-helper-hooks';
+import { useWindowFocus } from '../../../.';
 
 export default function WindowFocus() {
     const windowFocus = useWindowFocus();

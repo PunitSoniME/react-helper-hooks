@@ -8,7 +8,7 @@
 
 ```jsx
 import { useState } from 'react'
-import { useEventListener } from 'react-helper-hooks';
+import { useEventListener } from '../../../.';
 
 export default function EventListenerComponent() {
 

@@ -10,7 +10,7 @@
 
 ```jsx
 import { useState, useEffect } from 'react'
-import { useStateJson } from 'react-helper-hooks';
+import { useStateJson } from '../../../.';
 
 export default function StateJsonComponent() {
 

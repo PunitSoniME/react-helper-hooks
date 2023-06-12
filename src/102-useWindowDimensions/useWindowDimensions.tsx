@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
 function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window
+  const { innerWidth: width, innerHeight: height } = window;
 
   return {
     isMobile: width <= 480,
@@ -10,23 +10,23 @@ function getWindowDimensions() {
     isDesktop: width >= 1025 && width <= 1200,
     isExtraLarge: width >= 1201,
     width,
-    height
-  }
+    height,
+  };
 }
 
 export default function useWindowDimensions() {
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
-  )
+  );
 
   useEffect(() => {
     function handleResize() {
-      setWindowDimensions(getWindowDimensions())
+      setWindowDimensions(getWindowDimensions());
     }
 
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-  return windowDimensions
+  return windowDimensions;
 }

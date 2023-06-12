@@ -8,7 +8,7 @@
 
 ```jsx
  
-import { useGeolocation } from 'react-helper-hooks'
+import { useGeolocation } from '../../../.'
 
 export default function GeolocationComponent() {
     const { loading, error, data: { latitude, longitude } } = useGeolocation(null);

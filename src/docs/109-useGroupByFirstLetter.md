@@ -8,7 +8,7 @@
 
 ```jsx
 import { Fragment, useEffect, useState } from 'react'
-import { useGroupByFirstLetter } from 'react-helper-hooks';
+import { useGroupByFirstLetter } from '../../../.';
 
 const data = ["A", "AA", "B", "BB", "C", "CC", "D", "DD"].map((m, index) => {
     return {

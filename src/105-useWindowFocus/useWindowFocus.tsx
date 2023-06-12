@@ -1,20 +1,20 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
 export default function useWindowFocus() {
-  const [focus, setFocus] = useState(document.hasFocus())
+  const [focus, setFocus] = useState(document.hasFocus());
 
   useEffect(() => {
-    const onFocus = () => setFocus(true)
-    const onBlur = () => setFocus(false)
+    const onFocus = () => setFocus(true);
+    const onBlur = () => setFocus(false);
 
-    window.addEventListener('focus', onFocus)
-    window.addEventListener('blur', onBlur)
+    window.addEventListener('focus', onFocus);
+    window.addEventListener('blur', onBlur);
 
     return () => {
-      window.removeEventListener('focus', onFocus)
-      window.removeEventListener('blur', onBlur)
-    }
-  }, [])
+      window.removeEventListener('focus', onFocus);
+      window.removeEventListener('blur', onBlur);
+    };
+  }, []);
 
-  return focus
+  return focus;
 }

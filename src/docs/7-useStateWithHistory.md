@@ -8,7 +8,7 @@
 
 ```jsx
 import { useState } from 'react'
-import { useStateWithHistory } from 'react-helper-hooks'
+import { useStateWithHistory } from '../../../.'
 
 export default function StateWithHistoryComponent() {
     const [count, setCount, { history, pointer, back, forward, go }] = useStateWithHistory(1);

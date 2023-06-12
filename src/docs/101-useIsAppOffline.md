@@ -8,7 +8,7 @@
 
 ```jsx
  
-import { useIsAppOffline } from 'react-helper-hooks';
+import { useIsAppOffline } from '../../../.';
 
 export default function IsAppOfflineComponent() {
 

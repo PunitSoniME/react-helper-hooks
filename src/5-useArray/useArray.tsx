@@ -1,27 +1,28 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-export default function useArray(defaultValue) {
-  const [array, setArray] = useState(defaultValue)
+export default function useArray<T>(defaultValue: T[]) {
+  const [array, setArray] = useState(defaultValue);
 
-  function push(element) {
-    setArray((a) => [...a, element])
+  function push(element: T) {
+    setArray((a) => [...a, element]);
   }
 
-  function filter(callback) {
-    setArray((a) => a.filter(callback))
+  function filter(callback: Function) {
+    //  @ts-ignore
+    setArray((a) => a.filter(callback));
   }
 
-  function update(index, newElement) {
-    setArray(array.splice(index, 1, newElement) && [...array])
+  function update(index: number, newElement: T) {
+    setArray(array.splice(index, 1, newElement) && [...array]);
   }
 
-  function remove(index) {
-    setArray(array.filter((_, i) => index !== i))
+  function remove(index: number) {
+    setArray(array.filter((_, i) => index !== i));
   }
 
   function clear() {
-    setArray([])
+    setArray([]);
   }
 
-  return { array, set: setArray, push, filter, update, remove, clear }
+  return { array, set: setArray, push, filter, update, remove, clear };
 }
