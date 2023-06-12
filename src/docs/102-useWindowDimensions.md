@@ -8,7 +8,7 @@
 
 ```jsx
  
-import { useWindowDimensions } from 'react-helper-hooks';
+import { useWindowDimensions } from '../../../.';
 
 export default function WindowDimensionsComponent() {
 

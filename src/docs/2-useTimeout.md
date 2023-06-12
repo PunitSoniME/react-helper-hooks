@@ -8,7 +8,7 @@
 > Example
 
 ```jsx
-import { useTimeout } from 'react-helper-hooks'
+import { useTimeout } from '../../../.'
 
 export default function TimeoutComponent() {
 

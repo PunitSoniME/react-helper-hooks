@@ -8,7 +8,7 @@
 
 ```jsx
  
-import { useSessionStorage, useLocalStorage } from 'react-helper-hooks';
+import { useSessionStorage, useLocalStorage } from '../../../.';
 
 export default function StorageComponent() {
 

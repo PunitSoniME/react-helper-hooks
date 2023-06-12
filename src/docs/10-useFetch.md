@@ -8,7 +8,7 @@
 
 ```jsx
 import { useState } from 'react'
-import { useFetch } from 'react-helper-hooks';
+import { useFetch } from '../../../.';
 
 export default function FetchComponent() {
 

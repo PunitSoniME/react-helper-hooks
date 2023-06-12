@@ -7,7 +7,7 @@
 > Example
 
 ```jsx
-import { useToggle } from 'react-helper-hooks'
+import { useToggle } from '../../../.'
 
 export default function ToggleComponent() {
 

@@ -9,7 +9,7 @@
 
 ```jsx
  
-import { useColorBlend } from 'react-helper-hooks';
+import { useColorBlend } from '../../../.';
 
 export default function ColorBlendComponent() {
 

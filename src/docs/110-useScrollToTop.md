@@ -8,7 +8,7 @@
 
 ```jsx
  
-import { useScrollToTop } from 'react-helper-hooks';
+import { useScrollToTop } from '../../../.';
 
 export default function ScrollToTopComponent() {
 

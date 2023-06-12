@@ -9,7 +9,7 @@
 
 ```jsx
 import { useState } from 'react'
-import { useDebounce } from 'react-helper-hooks';
+import { useDebounce } from '../../../.';
 
 export default function DebounceComponent() {
 

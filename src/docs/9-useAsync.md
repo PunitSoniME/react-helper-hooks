@@ -8,7 +8,7 @@
 
 ```jsx
  
-import { useAsync } from 'react-helper-hooks';
+import { useAsync } from '../../../.';
 
 export default function AsyncComponent() {
     const { loading, error, value } = useAsync(() => {
