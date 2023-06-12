@@ -1,4 +1,4 @@
- 
+import React from 'react' 
 import { useScript } from 'react-helper-hooks';
 
 export default function ScriptComponent() {
