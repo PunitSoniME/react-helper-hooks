@@ -1,4 +1,4 @@
- 
+import React from 'react'; 
 import { useToggle } from 'react-helper-hooks'
 
 export default function ToggleComponent() {

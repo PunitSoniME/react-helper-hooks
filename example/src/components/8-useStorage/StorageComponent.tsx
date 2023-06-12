@@ -1,4 +1,4 @@
- 
+import * as React from 'react'; 
 import { useSessionStorage, useLocalStorage } from 'react-helper-hooks';
 
 export default function StorageComponent() {

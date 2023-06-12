@@ -1,3 +1,4 @@
+import React from 'react';
 import { lazy, Suspense, Fragment, useState } from 'react'
 import './index.css';
 

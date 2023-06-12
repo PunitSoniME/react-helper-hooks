@@ -1,4 +1,4 @@
- 
+import React from 'react';
 import { useScrollToTop } from 'react-helper-hooks';
 
 export default function ScrollToTopComponent() {

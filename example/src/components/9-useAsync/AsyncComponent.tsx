@@ -1,4 +1,4 @@
- 
+import React from 'react';
 import { useAsync } from 'react-helper-hooks';
 
 export default function AsyncComponent() {
