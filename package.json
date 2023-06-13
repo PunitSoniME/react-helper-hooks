@@ -15,8 +15,7 @@
     "url": "https://github.com/PunitSoniME/react-helper-hooks/issues"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "keywords": [
     "react",
@@ -47,9 +46,6 @@
   },
   "jest": {
     "testEnvironment": "jsdom"
-  },
-  "peerDependencies": {
-    "react": ">=16"
   },
   "engines": {
     "node": ">=14"
