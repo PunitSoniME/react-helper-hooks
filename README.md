@@ -22,7 +22,12 @@
 
 [npm_url]: https://www.npmjs.org/package/react-helper-hooks
 
-## Install
+## Documentation
+
+### https://react-helper-hooks.vercel.app
+
+
+## Install Package
 
 ```bash
 npm install --save react-helper-hooks
@@ -76,7 +81,7 @@ yarn add react-helper-hooks
 
 -----------------------------
 
-- [`useScript`](./src/docs/11-useScript.md) &mdash; This hook will help you to import external script [![][img-demo]](https://codesandbox.io/s/usefetch-ungdm)
+- [`useScript`](./src/docs/11-useScript.md) &mdash; This hook will help you to import external script [![][img-demo]](https://codesandbox.io/s/usescript-ungdm)
 
 -----------------------------
 
