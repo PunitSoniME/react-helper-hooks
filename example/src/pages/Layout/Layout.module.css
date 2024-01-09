@@ -1,0 +1,3 @@
+.main_height {
+    height: calc(100vh - 4rem);
+}

@@ -31,6 +31,7 @@
     "prepare": "dts build",
     "size": "size-limit",
     "start": "dts watch",
+    "start-example": "cd example && yarn start",
     "test": "dts test --passWithNoTests"
   },
   "husky": {
