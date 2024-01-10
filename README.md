@@ -41,98 +41,99 @@ yarn add react-helper-hooks
 
 -----------------------------
 
-- [`useToggle`](./src/docs/1-useToggle.md) &mdash; This hook will help you to handle toggle. [![][img-demo]](https://codesandbox.io/s/usetoggle-927kw)
+- [`useArray`](./src/docs/useArray.md) &mdash; This hook contains many methods of array like push, update, remove, filter, update, clear etc... [![][img-demo]](https://codesandbox.io/s/usearray-desdu)
 
 -----------------------------
 
-- [`useTimeout`](./src/docs/2-useTimeout.md) &mdash; This hook will help you to handle timeout ( just like setTimeout, but with more functionalities ). [![][img-demo]](https://codesandbox.io/s/usetimeout-fk8g9)
+- [`useAsync`](./src/docs/useAsync.md) &mdash; This hook will help you to handle async methods [![][img-demo]](https://codesandbox.io/s/useasync-en2ms)
 
 -----------------------------
 
-- [`useDebounce`](./src/docs/3-useDebounce.md) &mdash; This hook will help you to handle debounce ( Execute method once user stop typing ). [![][img-demo]](https://codesandbox.io/s/usedebounce-yuvjt)
+- [`useAsyncLoop`](./src/docs/useAsyncLoop.md) &mdash; This hook will help you to get the height, width, dimensions of browser, You can check either device is mobile or laptop or tablet or desktop or extra large device [![][img-demo]](https://codesandbox.io/s/useasyncloop-t53pw)
 
 -----------------------------
 
-- [`useUpdateEffect`](./src/docs/4-useUpdateEffect.md) &mdash; This hook will be used to call method after the value of <code>useUpdateEffect dependencies</code> changed, it will not be called on first render. [![][img-demo]](https://codesandbox.io/s/useupdateeffect-iik03)
+- [`useColorBlend`](./src/docs/useColorBlend.md) &mdash; A hook that generates blend color by passing 2 array [![][img-demo]](https://codesandbox.io/s/usecolorblend-781bv)
 
 -----------------------------
 
-- [`useArray`](./src/docs/5-useArray.md) &mdash; This hook contains many methods of array like push, update, remove, filter, update, clear etc... [![][img-demo]](https://codesandbox.io/s/usearray-desdu)
+- [`useCopyToClipboard`](./src/docs/useCopyToClipboard.md) &mdash; This hook will help you to copy a thing which you want [![][img-demo]](https://codesandbox.io/s/usecopytoclipboard-3yqhc)
 
 -----------------------------
 
-- [`usePrevious`](./src/docs/6-usePrevious.md) &mdash; This hook returns the previous value of defined variable [![][img-demo]](https://codesandbox.io/s/useprevious-xkc74)
+- [`useDebounce`](./src/docs/useDebounce.md) &mdash; This hook will help you to handle debounce ( Execute method once user stop typing ). [![][img-demo]](https://codesandbox.io/s/usedebounce-yuvjt)
 
 -----------------------------
 
-- [`useStateWithHistory`](./src/docs/7-useStateWithHistory.md) &mdash; This hook used to maintain history of any data [![][img-demo]](https://codesandbox.io/s/usestatewithhistory-pgojt)
+- [`useEventListener`](./src/docs/useEventListener.md) &mdash; This hook will help you to handle eventListener functionalities [![][img-demo]](https://codesandbox.io/s/useeventlistener-l5wy6)
 
 -----------------------------
 
-- [`useStorage`](./src/docs/8-useStorage.md) &mdash; This hook will help you to handle localStorage and sessionStorage [![][img-demo]](https://codesandbox.io/s/usestorage-p4dnk)
+- [`useFetch`](./src/docs/useFetch.md) &mdash; This hook will help you to handle fetch functionalities, which internally uses useAsync hook for async process [![][img-demo]](https://codesandbox.io/s/usefetch-kduom)
 
 -----------------------------
 
-- [`useAsync`](./src/docs/9-useAsync.md) &mdash; This hook will help you to handle async methods [![][img-demo]](https://codesandbox.io/s/useasync-en2ms)
+- [`useGeolocation`](./src/docs/useGeolocation.md) &mdash; This hook will help you to get latitude and longitude of user [![][img-demo]](https://codesandbox.io/s/usegeolocation-uyo9y)
 
 -----------------------------
 
-- [`useFetch`](./src/docs/10-useFetch.md) &mdash; This hook will help you to handle fetch functionalities, which internally uses useAsync hook for async process [![][img-demo]](https://codesandbox.io/s/usefetch-kduom)
+- [`useGroupByFirstLetter`](./src/docs/useGroupByFirstLetter.md) &mdash; A hook that helps you to group by the data by first letter [![][img-demo]](https://codesandbox.io/s/usegroupbyfirstletter-wow78n)
 
 -----------------------------
 
-- [`useScript`](./src/docs/11-useScript.md) &mdash; This hook will help you to import external script [![][img-demo]](https://codesandbox.io/s/usescript-ungdm)
+- [`useIsAppOffline`](./src/docs/useIsAppOffline.md) &mdash; This hook will help you to know your application is running of active internet or you are offline [![][img-demo]](https://codesandbox.io/s/useisappoffline-1tgjf)
 
 -----------------------------
 
-- [`useEventListener`](./src/docs/13-useEventListener.md) &mdash; This hook will help you to handle eventListener functionalities [![][img-demo]](https://codesandbox.io/s/useeventlistener-l5wy6)
+- [`usePrevious`](./src/docs/usePrevious.md) &mdash; This hook returns the previous value of defined variable [![][img-demo]](https://codesandbox.io/s/useprevious-xkc74)
 
 -----------------------------
 
-- [`useGeolocation`](./src/docs/17-useGeolocation.md) &mdash; This hook will help you to get latitude and longitude of user [![][img-demo]](https://codesandbox.io/s/usegeolocation-uyo9y)
+- [`useScript`](./src/docs/useScript.md) &mdash; This hook will help you to import external script [![][img-demo]](https://codesandbox.io/s/usescript-ungdm)
 
 -----------------------------
 
-- [`useCopyToClipboard`](./src/docs/18-useCopyToClipboard.md) &mdash; This hook will help you to copy a thing which you want [![][img-demo]](https://codesandbox.io/s/usecopytoclipboard-3yqhc)
+- [`useScrollToTop`](./src/docs/useScrollToTop.md) &mdash; A hook that helps you to scroll to top with smooth transition [![][img-demo]](https://codesandbox.io/s/usescrolltotop-g539ex)
 
 -----------------------------
 
-- [`useIsAppOffline`](./src/docs/101-useIsAppOffline.md) &mdash; This hook will help you to know your application is running of active internet or you are offline [![][img-demo]](https://codesandbox.io/s/useisappoffline-1tgjf)
+- [`useSpeech`](./src/docs/useSpeech.md) &mdash; This hook will help you implement speeching facility.
 
 -----------------------------
 
-- [`useWindowDimensions`](./src/docs/102-useWindowDimensions.md) &mdash; This hook will help you to get the height, width, dimensions of browser, You can check either device is mobile or laptop or tablet or desktop or extra large device [![][img-demo]](https://codesandbox.io/s/usewindowdimensions-dyhep)
+- [`useStateJson`](./src/docs/useStateJson.md) &mdash; A hook that stores a state as a JSON string to prevent unnecessary render updates. [![][img-demo]](https://codesandbox.io/s/usestatejson-u3i0r)
 
 -----------------------------
 
-- [`useAsyncLoop`](./src/docs/104-useAsyncLoop.md) &mdash; This hook will help you to get the height, width, dimensions of browser, You can check either device is mobile or laptop or tablet or desktop or extra large device [![][img-demo]](https://codesandbox.io/s/useasyncloop-t53pw)
+- [`useStateWithHistory`](./src/docs/useStateWithHistory.md) &mdash; This hook used to maintain history of any data [![][img-demo]](https://codesandbox.io/s/usestatewithhistory-pgojt)
 
 -----------------------------
 
-- [`useWindowFocus`](./src/docs/105-useWindowFocus.md) &mdash; This hook will help you to hide/show the sensitive information. Below example will help you to understand [![][img-demo]](https://codesandbox.io/s/usewindowfocus-kk282)
+- [`useStorage`](./src/docs/useStorage.md) &mdash; This hook will help you to handle localStorage and sessionStorage [![][img-demo]](https://codesandbox.io/s/usestorage-p4dnk)
 
 -----------------------------
 
-- [`useSubdomain`](./src/docs/106-useSubdomain.md) &mdash; This hook will return the subdomain of the application from url [![][img-demo]](https://codesandbox.io/s/usesubdomain-rc4n0)
+- [`useSubdomain`](./src/docs/useSubdomain.md) &mdash; This hook will return the subdomain of the application from url [![][img-demo]](https://codesandbox.io/s/usesubdomain-rc4n0)
 
 -----------------------------
 
-- [`useStateJson`](./src/docs/107-useStateJson.md) &mdash; A hook that stores a state as a JSON string to prevent unnecessary render updates. [![][img-demo]](https://codesandbox.io/s/usestatejson-u3i0r)
+- [`useTimeout`](./src/docs/useTimeout.md) &mdash; This hook will help you to handle timeout ( just like setTimeout, but with more functionalities ). [![][img-demo]](https://codesandbox.io/s/usetimeout-fk8g9)
 
 -----------------------------
 
-
-- [`useColorBlend`](./src/docs/108-useColorBlend.md) &mdash; A hook that generates blend color by passing 2 array [![][img-demo]](https://codesandbox.io/s/usecolorblend-781bv)
-
------------------------------
-
-
-- [`useGroupByFirstLetter`](./src/docs/109-useGroupByFirstLetter.md) &mdash; A hook that helps you to group by the data by first letter [![][img-demo]](https://codesandbox.io/s/usegroupbyfirstletter-wow78n)
+- [`useToggle`](./src/docs/useToggle.md) &mdash; This hook will help you to handle toggle. [![][img-demo]](https://codesandbox.io/s/usetoggle-927kw)
 
 -----------------------------
 
+- [`useUpdateEffect`](./src/docs/useUpdateEffect.md) &mdash; This hook will be used to call method after the value of <code>useUpdateEffect dependencies</code> changed, it will not be called on first render. [![][img-demo]](https://codesandbox.io/s/useupdateeffect-iik03)
 
-- [`useScrollToTop`](./src/docs/110-useScrollToTop.md) &mdash; A hook that helps you to scroll to top with smooth transition [![][img-demo]](https://codesandbox.io/s/usescrolltotop-g539ex)
+-----------------------------
+
+- [`useWindowDimensions`](./src/docs/useWindowDimensions.md) &mdash; This hook will help you to get the height, width, dimensions of browser, You can check either device is mobile or laptop or tablet or desktop or extra large device [![][img-demo]](https://codesandbox.io/s/usewindowdimensions-dyhep)
+
+-----------------------------
+
+- [`useWindowFocus`](./src/docs/useWindowFocus.md) &mdash; This hook will help you to hide/show the sensitive information. Below example will help you to understand [![][img-demo]](https://codesandbox.io/s/usewindowfocus-kk282)
 
 -----------------------------
 
@@ -140,17 +141,13 @@ yarn add react-helper-hooks
 
 ### More hooks comming soon
 
-<br />
-
----------------
-
-### I want to give special thanks to Kyle cook of [Web Dev Simplified](https://twitter.com/DevSimplified) [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/bukotsunikki.svg?style=social&label=Follow@DevSimplified)](https://twitter.com/DevSimplified)
-### I got inspiration from his youtube videos.
 
 <br />
 
-## Follow me on twitter for more updates [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/bukotsunikki.svg?style=social&label=Follow@PunitSoniME)](https://twitter.com/PunitSoniME)
+## Follow me on [![Twitter URL](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/PunitSoniME)
 
+
+## Follow me on [![Linkedin URL](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/PunitSoniME)
 
 <br />
 
@@ -160,4 +157,4 @@ MIT © [PunitSoniME](https://github.com/PunitSoniME)
 
 [img-demo]: https://img.shields.io/badge/demo-🚀-blue.svg
 
----------
+
