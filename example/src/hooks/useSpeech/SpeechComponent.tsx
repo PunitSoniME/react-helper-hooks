@@ -1,7 +1,6 @@
-import { lazy, Suspense, useEffect, useState } from 'react';
-import { useSpeech } from '../../../../src/';
+import { lazy, Suspense, useState } from 'react';
+import { useSpeech } from '../../../../.';
 import { packageName } from '@/lib/utils';
-import Muted from '@/common/Muted';
 import { Button } from '@/components/ui/button';
 import { Textarea } from "@/components/ui/textarea"
 
