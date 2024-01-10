@@ -1,8 +1,7 @@
 import { lazy, Suspense } from 'react';
-import { useWindowFocus } from '../../../../.';
+import { useWindowFocus } from '../../../..';
 import { packageName } from '@/lib/utils';
 import Muted from '@/common/Muted';
-import { CheckCircle } from 'lucide-react';
 
 const Title = lazy(() => import('@/common/Details/Title'));
 const Block = lazy(() => import('@/common/Details/Block'));
@@ -15,7 +14,7 @@ const api = [
     { execute: 'windowFocus', type: 'boolean', description: 'Returns true if your focus is in current window' },
 ];
 
-export default function WindowDimensionsComponent() {
+export default function WindowFocusComponent() {
     
     const windowFocus = useWindowFocus();
 

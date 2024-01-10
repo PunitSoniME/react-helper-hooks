@@ -22,6 +22,7 @@ import useColorBlend from './useColorBlend/useColorBlend';
 import useGroupByFirstLetter from './useGroupByFirstLetter/useGroupByFirstLetter';
 import useScrollToTop from './useScrollToTop/useScrollToTop';
 import useHash from './useHash';
+import useSpeech from './useSpeech/useSpeech';
 
 export {
   useToggle,
@@ -49,4 +50,5 @@ export {
   useGroupByFirstLetter,
   useScrollToTop,
   useHash,
+  useSpeech,
 };
