@@ -34,6 +34,7 @@ const PreviousComponent = lazy(() => import('@/hooks/usePrevious/PreviousCompone
 const StateWithHistoryComponent = lazy(() => import('@/hooks/useStateWithHistory/StateWithHistoryComponent'));
 const StorageComponent = lazy(() => import('@/hooks/useStorage/StorageComponent'));
 const AsyncComponent = lazy(() => import('@/hooks/useAsync/AsyncComponent'));
+const SpeechComponent = lazy(() => import('@/hooks/useSpeech/SpeechComponent'));
 
 export const hooks: Record<string, any> = {
   'useToggle': ToggleComponent,
@@ -59,6 +60,7 @@ export const hooks: Record<string, any> = {
   'useColorBlend': ColorBlendComponent,
   'useGroupByFirstLetter': GroupByFirstLetterComponent,
   'useScrollToTop': ScrollToTopComponent,
+  'useSpeech': SpeechComponent
 };
 
 export const props = {
