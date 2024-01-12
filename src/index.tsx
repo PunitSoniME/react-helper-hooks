@@ -1,28 +1,29 @@
-import useToggle from './useToggle/useToggle';
-import useTimeout from './useTimeout/useTimeout';
-import useDebounce from './useDebounce/useDebounce';
-import useUpdateEffect from './useUpdate/useUpdateEffect';
-import useArray from './useArray/useArray';
-import usePrevious from './usePrevious/usePrevious';
-import useStateWithHistory from './useStateWithHistory/useStateWithHistory';
-import { useLocalStorage, useSessionStorage } from './useStorage/useStorage';
-import useAsync from './useAsync/useAsync';
-import useFetch from './useFetch/useFetch';
-import useScript from './useScript/useScript';
-import useEventListener from './useEventListener/useEventListener';
-import useGeolocation from './useGeolocation/useGeolocation';
-import useCopyToClipboard from './useCopyToClipboard/useCopyToClipboard';
-import useIsAppOffline from './useIsAppOffline/useIsAppOffline';
-import useWindowDimensions from './useWindowDimensions/useWindowDimensions';
-import useAsyncLoop from './useAsyncLoop/useAsyncLoop';
-import useWindowFocus from './useWindowFocus/useWindowFocus';
-import useSubdomain from './useSubdomain/useSubdomain';
-import useStateJson from './useStateJson/useStateJson';
-import useColorBlend from './useColorBlend/useColorBlend';
-import useGroupByFirstLetter from './useGroupByFirstLetter/useGroupByFirstLetter';
-import useScrollToTop from './useScrollToTop/useScrollToTop';
+import useToggle from './useToggle';
+import useTimeout from './useTimeout';
+import useDebounce from './useDebounce';
+import useUpdateEffect from './useUpdate';
+import useArray from './useArray';
+import usePrevious from './usePrevious';
+import useStateWithHistory from './useStateWithHistory';
+import { useLocalStorage, useSessionStorage } from './useStorage';
+import useAsync from './useAsync';
+import useFetch from './useFetch';
+import useScript from './useScript';
+import useEventListener from './useEventListener';
+import useGeolocation from './useGeolocation';
+import useCopyToClipboard from './useCopyToClipboard';
+import useIsAppOffline from './useIsAppOffline';
+import useWindowDimensions from './useWindowDimensions';
+import useAsyncLoop from './useAsyncLoop';
+import useWindowFocus from './useWindowFocus';
+import useSubdomain from './useSubdomain';
+import useStateJson from './useStateJson';
+import useColorBlend from './useColorBlend';
+import useGroupByFirstLetter from './useGroupByFirstLetter';
+import useScrollToTop from './useScrollToTop';
 import useHash from './useHash';
-import useSpeech from './useSpeech/useSpeech';
+import useSpeech from './useSpeech';
+import useProvidersTree from './useProvidersTree';
 
 export {
   useToggle,
@@ -51,4 +52,5 @@ export {
   useScrollToTop,
   useHash,
   useSpeech,
+  useProvidersTree,
 };

@@ -1,32 +1,31 @@
 import { Button } from '@/components/ui/button'
-import { examleSandboxLinks, exampleMarkDownPrefixUrl } from '@/lib/utils';
 import { MoveUpRightIcon } from 'lucide-react'
 
-export default function RedirectToExample({ hook }: any) {
+const githubUrl = 'https://github.com/PunitSoniME/react-helper-hooks/blob/main'
+const hookCodeUrl = `${githubUrl}/src`;
+const exampleCodeUrl = `${githubUrl}/example/src/hooks`;
 
-    const codeSandboxLink = examleSandboxLinks[hook];
+export default function RedirectToExample({ hook }: any) {
 
     return (
         <>
             <Button size="sm" className='mt-2'
                 onClick={() => {
-                    window.open(`${exampleMarkDownPrefixUrl}/${hook}.md`, '_blank');
+                    window.open(`${hookCodeUrl}/${hook}/index.tsx`, '_blank');
                 }}
             >
                 Example Code
                 <MoveUpRightIcon className='ml-2' size={14} />
             </Button>
 
-            {
-                codeSandboxLink ? <Button size="sm" variant="secondary" className='ml-2 mt-2'
-                    onClick={() => {
-                        window.open(codeSandboxLink, '_blank');
-                    }}
-                >
-                    Example Playground
-                    <MoveUpRightIcon className='ml-2' size={14} />
-                </Button> : ""
-            }
+            <Button size="sm" variant="secondary" className='ml-2 mt-2'
+                onClick={() => {
+                    window.open(`${exampleCodeUrl}/${hook}/index.tsx`, '_blank');
+                }}
+            >
+                Source code of hook
+                <MoveUpRightIcon className='ml-2' size={14} />
+            </Button>
         </>
     )
 }
