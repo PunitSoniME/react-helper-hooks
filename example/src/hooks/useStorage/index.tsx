@@ -9,7 +9,7 @@ const Documentation = lazy(() => import('@/common/Documentation'));
 const sessionStorageHook = 'useSessionStorage';
 const localStorageHook = 'useLocalStorage';
 
-const info = 'Help you to handle sessionStorage and localStorage';
+const info = 'Helps you to handle sessionStorage and localStorage';
 
 const usage: string = `import { ${sessionStorageHook}, ${localStorageHook} } from '${packageName}';
 

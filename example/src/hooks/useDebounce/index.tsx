@@ -18,7 +18,7 @@ export default function Component() {
             TIMER - number - Pass seconds in milliseconds format.
             DEPENDENCIES - Array - Collection of dependencies, Callback function will execute when the value of any dependencies change
     */
-    ${hook}(() => { CODE_TO_EXECUTE }, 1000, [DEPENDENCIES]);
+    ${hook}(() => { CODE_TO_EXECUTE }, TIMER, [DEPENDENCIES]);
 }`
 
 const timer = 1000;

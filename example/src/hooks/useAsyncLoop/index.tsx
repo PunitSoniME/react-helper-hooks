@@ -6,7 +6,7 @@ const Block = lazy(() => import('@/common/Details/Block'));
 const Documentation = lazy(() => import('@/common/Documentation'));
 
 const hook = 'useAsyncLoop';
-const info = 'Help you to work on async functionality.';
+const info = 'Helps you to work on async functionality.';
 
 const usage: string = `import { ${hook} } from '${packageName}';
 
