@@ -36,63 +36,53 @@ const StorageComponent = lazy(() => import('@/hooks/useStorage'));
 const AsyncComponent = lazy(() => import('@/hooks/useAsync'));
 const SpeechComponent = lazy(() => import('@/hooks/useSpeech'));
 const ProvidersTreeComponent = lazy(() => import('@/hooks/useProvidersTree'));
+const HashComponent = lazy(() => import('@/hooks/useHash'));
 
-export const hooks: Record<string, any> = {
-  'useToggle': ToggleComponent,
-  'useTimeout': TimeoutComponent,
-  'useDebounce': DebounceComponent,
-  'useUpdateEffect': UpdateEffectComponent,
-  'useArray': ArrayComponent,
-  'usePrevious': PreviousComponent,
-  'useStateWithHistory': StateWithHistoryComponent,
-  'useStorage': StorageComponent,
-  'useAsync': AsyncComponent,
-  'useFetch': FetchComponent,
-  'useScript': ScriptComponent,
-  'useEventListener': EventListenerComponent,
-  'useIsAppOffline': IsAppOfflineComponent,
-  'useWindowDimensions': WindowDimensionsComponent,
-  'useGeolocation': GeolocationComponent,
-  'useAsyncLoop': AsyncLoopComponent,
-  'useWindowFocus': WindowFocusComponent,
-  'useSubdomain': SubdomainComponent,
-  'useCopyToClipboard': CopyToClipboardComponent,
-  'useStateJson': StateJsonComponent,
-  'useColorBlend': ColorBlendComponent,
-  'useGroupByFirstLetter': GroupByFirstLetterComponent,
-  'useScrollToTop': ScrollToTopComponent,
-  'useSpeech': SpeechComponent,
-  'useProvidersTree': ProvidersTreeComponent
-};
+export const hooks = [
+  { key: 'useToggle', Component: ToggleComponent },
+  { key: 'useTimeout', Component: TimeoutComponent },
+  { key: 'useDebounce', Component: DebounceComponent },
+  { key: 'useUpdateEffect', Component: UpdateEffectComponent },
+  { key: 'useArray', Component: ArrayComponent },
+  { key: 'usePrevious', Component: PreviousComponent },
+  { key: 'useStateWithHistory', Component: StateWithHistoryComponent },
+  { key: 'useStorage', Component: StorageComponent },
+  { key: 'useAsync', Component: AsyncComponent },
+  { key: 'useFetch', Component: FetchComponent },
+  { key: 'useScript', Component: ScriptComponent },
+  { key: 'useEventListener', Component: EventListenerComponent },
+  { key: 'useIsAppOffline', Component: IsAppOfflineComponent },
+  { key: 'useWindowDimensions', Component: WindowDimensionsComponent },
+  { key: 'useGeolocation', Component: GeolocationComponent },
+  { key: 'useAsyncLoop', Component: AsyncLoopComponent },
+  { key: 'useWindowFocus', Component: WindowFocusComponent },
+  { key: 'useSubdomain', Component: SubdomainComponent },
+  { key: 'useCopyToClipboard', Component: CopyToClipboardComponent },
+  { key: 'useStateJson', Component: StateJsonComponent },
+  { key: 'useColorBlend', Component: ColorBlendComponent },
+  { key: 'useGroupByFirstLetter', Component: GroupByFirstLetterComponent },
+  { key: 'useScrollToTop', Component: ScrollToTopComponent },
+  { key: 'useSpeech', Component: SpeechComponent, isNew: true },
+  { key: 'useProvidersTree', Component: ProvidersTreeComponent, isNew: true },
+  { key: 'useHash', Component: HashComponent, isNew: true }
+];
 
 export const props = {
   'useTimeout': { defaultTimeout: 15000 }
 }
 
-const codeSandboxUrl = 'https://codesandbox.io/s'
+export const sortBasedOnString = (data: any[], key: string) => {
+  return [...data].sort((a: any, b: any) => {
+    const value1 = a[key]?.toLowerCase();
+    const value2 = b[key]?.toLowerCase();
 
-export const examleSandboxLinks: Record<string, string> = {
-  'useToggle': `${codeSandboxUrl}/usetoggle-927kw`,
-  'useTimeout': `${codeSandboxUrl}/usetimeout-fk8g9`,
-  'useDebounce': `${codeSandboxUrl}/usedebounce-yuvjt`,
-  'useUpdateEffect': `${codeSandboxUrl}/useupdateeffect-iik03`,
-  'useArray': `${codeSandboxUrl}/usearray-desdu`,
-  'usePrevious': `${codeSandboxUrl}/useprevious-xkc74`,
-  'useStateWithHistory': `${codeSandboxUrl}/usestatewithhistory-pgojt`,
-  'useStorage': `${codeSandboxUrl}/usestorage-p4dnk`,
-  'useAsync': `${codeSandboxUrl}/useasync-en2ms`,
-  'useFetch': `${codeSandboxUrl}/usefetch-kduom`,
-  'useScript': `${codeSandboxUrl}/usescript-ungdm`,
-  'useEventListener': `${codeSandboxUrl}/useeventlistener-l5wy6`,
-  'useIsAppOffline': `${codeSandboxUrl}/useisappoffline-uyo9y`,
-  'useWindowDimensions': `${codeSandboxUrl}/usewindowdimensions-dyhep`,
-  'useGeolocation': `${codeSandboxUrl}/usegeolocation-1tgjf`,
-  'useAsyncLoop': `${codeSandboxUrl}/useasyncloop-t53pw`,
-  'useWindowFocus': `${codeSandboxUrl}/usewindowfocus-kk282`,
-  'useSubdomain': `${codeSandboxUrl}/usesubdomain-rc4n0`,
-  'useCopyToClipboard': `${codeSandboxUrl}/usecopytoclipboard-3yqhc`,
-  'useStateJson': `${codeSandboxUrl}/usestatejson-u3i0r`,
-  'useColorBlend': `${codeSandboxUrl}/usecolorblend-781bv`,
-  'useGroupByFirstLetter': `${codeSandboxUrl}/usegroupbyfirstletter-wow78n`,
-  'useScrollToTop': `${codeSandboxUrl}/usescrolltotop-g539ex`,
+    if (value1 < value2) {
+      return -1;
+    }
+    if (value1 > value2) {
+      return 1;
+    }
+
+    return 0;
+  })
 }

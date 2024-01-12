@@ -7,7 +7,7 @@ const Block = lazy(() => import('@/common/Details/Block'));
 const Documentation = lazy(() => import('@/common/Documentation'));
 
 const hook = 'useScript';
-const info = 'Help you to import external javascript library';
+const info = 'Helps you to import external javascript library';
 
 const usage: string = `import { ${hook} } from '${packageName}';
 

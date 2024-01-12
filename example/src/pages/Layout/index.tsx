@@ -5,6 +5,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import classes from './Layout.module.css';
 import RedirectToExample from '@/common/Details/RedirectToExample';
 import { Sheet, SheetContent } from '@/components/ui/sheet';
+import Title from '@/common/Details/Title';
 
 const Header = lazy(() => import('../Header'));
 const Sidebar = lazy(() => import('../Sidebar'));
@@ -17,10 +18,10 @@ export default function Layout() {
     const selectedHook: string = hash ? (hash as string).split('#')[1] : "";
 
     // @ts-ignore
-    const Component = selectedHook ? hooks[selectedHook] : <></>;
+    const Component = hooks.find(f => f.key === selectedHook)?.Component || null;
 
     // @ts-ignore
-    const propsToPass = selectedHook ? props[selectedHook] : {};
+    const propsToPass = selectedHook && props[selectedHook] ? props[selectedHook] : {};
 
     return (
         <div>
@@ -40,7 +41,7 @@ export default function Layout() {
 
                     <SheetContent className="w-[300px] px-2">
                         <ScrollArea className='h-full'>
-                            <div className="pt-3 pr-3">
+                            <div className="pt-3 pl-1 pr-3">
                                 <Suspense fallback={<></>}>
                                     <HooksList />
                                 </Suspense>
@@ -53,9 +54,16 @@ export default function Layout() {
                             <ScrollArea className="w-full rounded-none">
                                 <div className='px-4 pt-2 pb-32'>
                                     <Suspense fallback={<></>}>
-                                        <Component {...propsToPass} />
-
-                                        <RedirectToExample hook={selectedHook} />
+                                        {
+                                            Component
+                                                ? <>
+                                                    <Component {...propsToPass} />
+                                                    <RedirectToExample hook={selectedHook} />
+                                                </>
+                                                : <>
+                                                    {selectedHook} not found
+                                                </>
+                                        }
                                     </Suspense>
                                 </div>
                             </ScrollArea>

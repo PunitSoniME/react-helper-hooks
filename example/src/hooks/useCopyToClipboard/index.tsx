@@ -8,7 +8,7 @@ const Block = lazy(() => import('@/common/Details/Block'));
 const Documentation = lazy(() => import('@/common/Documentation'));
 
 const hook = 'useCopyToClipboard';
-const info = 'Help you to copy a thing which you want';
+const info = 'Helps you to copy a thing which you want';
 
 const usage: string = `import { ${hook} } from '${packageName}';
 

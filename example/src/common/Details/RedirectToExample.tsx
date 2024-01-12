@@ -11,7 +11,7 @@ export default function RedirectToExample({ hook }: any) {
         <>
             <Button size="sm" className='mt-2'
                 onClick={() => {
-                    window.open(`${hookCodeUrl}/${hook}/index.tsx`, '_blank');
+                    window.open(`${exampleCodeUrl}/${hook}/index.tsx`, '_blank');
                 }}
             >
                 Example Code
@@ -20,7 +20,7 @@ export default function RedirectToExample({ hook }: any) {
 
             <Button size="sm" variant="secondary" className='ml-2 mt-2'
                 onClick={() => {
-                    window.open(`${exampleCodeUrl}/${hook}/index.tsx`, '_blank');
+                    window.open(`${hookCodeUrl}/${hook}/index.tsx`, '_blank');
                 }}
             >
                 Source code of hook

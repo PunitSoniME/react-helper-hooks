@@ -1,12 +1,8 @@
 import { lazy, Suspense } from 'react'
-import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { cn, hooks } from '@/lib/utils';
-import { useHash } from '../../../../.';
 import classes from './Sidebar.module.css';
 
 const HooksList = lazy(() => import('./HooksList'));
-
 
 export default function Sidebar() {
 

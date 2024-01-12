@@ -6,7 +6,7 @@ const Block = lazy(() => import('@/common/Details/Block'));
 const Documentation = lazy(() => import('@/common/Documentation'));
 
 const hook = 'useEventListener';
-const info = 'Help you to handle eventListener functionalities';
+const info = 'Helps you to handle eventListener functionalities';
 
 const usage: string = `import { ${hook} } from '${packageName}';
 

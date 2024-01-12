@@ -8,7 +8,7 @@ const Block = lazy(() => import('@/common/Details/Block'));
 const Documentation = lazy(() => import('@/common/Documentation'));
 
 const hook = 'useSpeech';
-const info = 'Helps will help you implement speeching facility';
+const info = 'Helps you implement speeching facility';
 
 const usage: string = `import { ${hook} } from '${packageName}';
 
@@ -31,6 +31,12 @@ export default function SpeechComponent() {
     const [text, setText] = useState("Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nam veritatis incidunt debitis. Repellendus at corrupti odit, nam deleniti cum fugiat temporibus libero suscipit harum fugit aliquid saepe minima ipsam.");
     const { play, resume, pause, stop, loadSpeech, currentPlayingState } = useSpeech();
 
+    const disablePlayButton = !(currentPlayingState === 'initialized');
+    const disablePauseButton = !(['playing', 'resumed'].includes(currentPlayingState));
+    const disableResumeButton = currentPlayingState !== 'paused';
+    const disableStopButton = !(['playing', 'resumed', 'paused'].includes(currentPlayingState));
+
+
     return (
         <Suspense fallback={<></>}>
 
@@ -45,29 +51,30 @@ export default function SpeechComponent() {
                     <Textarea
                         defaultValue={text}
                         className='mb-4'
+                        disabled={disablePlayButton}
                         onChange={(e) => {
                             setText(e.target.value);
                         }} />
 
                     <div className="flex gap-3 mb-2">
-                        <Button size="sm" disabled={!(currentPlayingState === 'initialized')}
+                        <Button size="sm" disabled={disablePlayButton}
                             onClick={() => {
                                 loadSpeech(document.getElementById('text-to-speech-content'), text);
                                 play();
                             }}>Play</Button>
 
-                        <Button size="sm" disabled={!(['playing', 'resumed'].includes(currentPlayingState))}
+                        <Button size="sm" disabled={disablePauseButton}
                             onClick={() => {
                                 pause();
                             }}>Pause</Button>
 
-                        <Button size="sm" disabled={currentPlayingState !== 'paused'}
+                        <Button size="sm" disabled={disableResumeButton}
                             onClick={() => {
                                 resume();
                             }}>Resume</Button>
 
                         <Button size="sm" variant="destructive"
-                            disabled={!(['playing', 'resumed', 'paused'].includes(currentPlayingState))}
+                            disabled={disableStopButton}
                             onClick={() => {
                                 stop();
                             }}>Stop</Button>
@@ -85,7 +92,7 @@ export default function SpeechComponent() {
 
                 </Block>
             </Documentation>
-            
+
         </Suspense>
     )
 }
