@@ -7,7 +7,6 @@ import { Input } from '@/components/ui/input';
 
 const components = sortBasedOnString(hooks, 'key');
 
-console.log(components);
 export default function HooksList() {
 
     const [search, setSearch] = useState("");
