@@ -9,11 +9,11 @@ export default function Header() {
 
     return (
         <div className='h-16 flex items-center px-4 bg-blue-600 sticky top-0 z-10 justify-between'>
-            <span className='font-bold text-xl tracking-wider text-white cursor-pointer'
+            <Button variant="link" className='hover:no-underline p-0 font-bold text-xl tracking-wider text-white cursor-pointer'
                 onClick={() => {
                     //@ts-ignore
                     setHash("");
-                }}>React Helper Hooks</span>
+                }}>React Helper Hooks</Button>
 
             <div className='flex gap-3'>
                 <Button variant="outline" size="icon"

@@ -12,22 +12,29 @@ const InstallationCommand = ({ packageManager, installationCommand }: any) => {
 
     const [isCopied, setIsCopied] = useState(false);
 
-    return <div className="flex items-center tracking-wide gap-8 py-2 px-4 bg-slate-800 rounded text-white group/item">
+    return <div className="flex items-center tracking-wide gap-8 py-2 px-4 bg-slate-800 rounded text-white justify-between">
         <p>{command}</p>
 
         {
-            isCopied ? <Check size={20} /> : <Copy size={20}
-                className='invisible cursor-pointer group-hover/item:visible'
+            isCopied ? <Check size={20} /> : <Copy
+                size={20}
+                className='cursor-pointer'
                 onClick={() => {
                     copyToClipboard(command);
                     setIsCopied(true);
 
                     setTimeout(() => {
                         setIsCopied(false)
-                    }, 1000)
+                    }, 3000)
                 }} />
         }
     </div>
+}
+
+const BlockTitle = ({ children }: any) => {
+    return <span className='font-bold text-xl tracking-wider text-blue-600'>
+        {children}
+    </span>
 }
 
 export default function LandingPage() {
@@ -36,13 +43,13 @@ export default function LandingPage() {
         <div className='p-4 space-y-10'>
             <div className='flex gap-6 flex-col'>
                 <div>
-                    <span className='font-bold text-xl tracking-wider text-blue-600'>React Helper Hooks</span>
+                    <BlockTitle>React Helper Hooks</BlockTitle>
                     <Muted>Custom React Helper Hooks to save hours of developers</Muted>
                 </div>
 
                 <div className='flex flex-col gap-3'>
 
-                    <span className='font-bold text-xl tracking-wider text-blue-600'>Installation Command</span>
+                    <BlockTitle>Installation Command</BlockTitle>
 
                     <InstallationCommand key="yarn" packageManager="yarn" installationCommand="add" />
                     <InstallationCommand key="npm" packageManager="npm" installationCommand="i" />
@@ -50,7 +57,7 @@ export default function LandingPage() {
                 </div>
             </div>
 
-            <div className='flex gap-3 h-5 flex-wrap'>
+            <div className='flex gap-3 min-h-5 flex-wrap'>
 
                 {
                     [
@@ -80,8 +87,8 @@ export default function LandingPage() {
                         <img key={index} src={link} alt={link} />
                     ))
                 }
-
             </div>
+
         </div>
     )
 }

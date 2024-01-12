@@ -11,30 +11,31 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-const ToggleComponent = lazy(() => import('@/hooks/useToggle/ToggleComponent'));
-const FetchComponent = lazy(() => import('@/hooks/useFetch/FetchComponent'));
-const IsAppOfflineComponent = lazy(() => import('@/hooks/useIsAppOffline/IsAppOfflineComponent'));
-const WindowDimensionsComponent = lazy(() => import('@/hooks/useWindowDimensions/WindowDimensionsComponent'));
-const AsyncLoopComponent = lazy(() => import('@/hooks/useAsyncLoop/AsyncLoopComponent'));
-const WindowFocusComponent = lazy(() => import('@/hooks/useWindowFocus/WindowFocusComponent'));
-const SubdomainComponent = lazy(() => import('@/hooks/useSubdomain/SubdomainComponent'));
-const StateJsonComponent = lazy(() => import('@/hooks/useStateJson/StateJsonComponent'));
-const ColorBlendComponent = lazy(() => import('@/hooks/useColorBlend/ColorBlendComponent'));
-const GroupByFirstLetterComponent = lazy(() => import('@/hooks/useGroupByFirstLetter/GroupByFirstLetterComponent'));
-const ScriptComponent = lazy(() => import('@/hooks/useScript/ScriptComponent'));
-const ScrollToTopComponent = lazy(() => import('@/hooks/useScrollToTop/ScrollToTopComponent'));
-const EventListenerComponent = lazy(() => import('@/hooks/useEventListener/EventListenerComponent'));
-const GeolocationComponent = lazy(() => import('@/hooks/useGeolocation/GeolocationComponent'));
-const CopyToClipboardComponent = lazy(() => import('@/hooks/useCopyToClipboard/CopyToClipboardComponent'));
-const TimeoutComponent = lazy(() => import('@/hooks/useTimeout/TimeoutComponent'));
-const DebounceComponent = lazy(() => import('@/hooks/useDebounce/DebounceComponent'));
-const UpdateEffectComponent = lazy(() => import('@/hooks/useUpdateEffect/UpdateEffectComponent'));
-const ArrayComponent = lazy(() => import('@/hooks/useArray/ArrayComponent'));
-const PreviousComponent = lazy(() => import('@/hooks/usePrevious/PreviousComponent'));
-const StateWithHistoryComponent = lazy(() => import('@/hooks/useStateWithHistory/StateWithHistoryComponent'));
-const StorageComponent = lazy(() => import('@/hooks/useStorage/StorageComponent'));
-const AsyncComponent = lazy(() => import('@/hooks/useAsync/AsyncComponent'));
-const SpeechComponent = lazy(() => import('@/hooks/useSpeech/SpeechComponent'));
+const ToggleComponent = lazy(() => import('@/hooks/useToggle'));
+const FetchComponent = lazy(() => import('@/hooks/useFetch'));
+const IsAppOfflineComponent = lazy(() => import('@/hooks/useIsAppOffline'));
+const WindowDimensionsComponent = lazy(() => import('@/hooks/useWindowDimensions'));
+const AsyncLoopComponent = lazy(() => import('@/hooks/useAsyncLoop'));
+const WindowFocusComponent = lazy(() => import('@/hooks/useWindowFocus'));
+const SubdomainComponent = lazy(() => import('@/hooks/useSubdomain'));
+const StateJsonComponent = lazy(() => import('@/hooks/useStateJson'));
+const ColorBlendComponent = lazy(() => import('@/hooks/useColorBlend'));
+const GroupByFirstLetterComponent = lazy(() => import('@/hooks/useGroupByFirstLetter'));
+const ScriptComponent = lazy(() => import('@/hooks/useScript'));
+const ScrollToTopComponent = lazy(() => import('@/hooks/useScrollToTop'));
+const EventListenerComponent = lazy(() => import('@/hooks/useEventListener'));
+const GeolocationComponent = lazy(() => import('@/hooks/useGeolocation'));
+const CopyToClipboardComponent = lazy(() => import('@/hooks/useCopyToClipboard'));
+const TimeoutComponent = lazy(() => import('@/hooks/useTimeout'));
+const DebounceComponent = lazy(() => import('@/hooks/useDebounce'));
+const UpdateEffectComponent = lazy(() => import('@/hooks/useUpdateEffect'));
+const ArrayComponent = lazy(() => import('@/hooks/useArray'));
+const PreviousComponent = lazy(() => import('@/hooks/usePrevious'));
+const StateWithHistoryComponent = lazy(() => import('@/hooks/useStateWithHistory'));
+const StorageComponent = lazy(() => import('@/hooks/useStorage'));
+const AsyncComponent = lazy(() => import('@/hooks/useAsync'));
+const SpeechComponent = lazy(() => import('@/hooks/useSpeech'));
+const ProvidersTreeComponent = lazy(() => import('@/hooks/useProvidersTree'));
 
 export const hooks: Record<string, any> = {
   'useToggle': ToggleComponent,
@@ -60,7 +61,8 @@ export const hooks: Record<string, any> = {
   'useColorBlend': ColorBlendComponent,
   'useGroupByFirstLetter': GroupByFirstLetterComponent,
   'useScrollToTop': ScrollToTopComponent,
-  'useSpeech': SpeechComponent
+  'useSpeech': SpeechComponent,
+  'useProvidersTree': ProvidersTreeComponent
 };
 
 export const props = {
@@ -94,84 +96,3 @@ export const examleSandboxLinks: Record<string, string> = {
   'useGroupByFirstLetter': `${codeSandboxUrl}/usegroupbyfirstletter-wow78n`,
   'useScrollToTop': `${codeSandboxUrl}/usescrolltotop-g539ex`,
 }
-
-
-// export const hooks = {
-//   'useToggle': {
-//     component: ToggleComponent,
-//     description: 'hook is a custom React hook that facilitates toggling between two states.'
-//   },
-//   'useTimeout': {
-//     component: TimeoutComponent,
-//     description: 'works just like setTimeout, however we created one single hook which can also do reset and clear timeout',
-//     props: { defaultTimeout: 15000 },
-//     api: [
-//       { execute: 'clear ( function )', description: 'To clear already running timeout' },
-//       { execute: 'reset ( function )', description: 'The function to reset the timer again' }
-//     ]
-//   },
-//   'useDebounce': {
-//     component: DebounceComponent,
-//     description: 'will wait for sometime once user stop typing anything',
-//   },
-//   'useUpdateEffect': {
-//     component: UpdateEffectComponent,
-//   },
-//   'useArray': {
-//     component: ArrayComponent,
-//   },
-//   'usePrevious': {
-//     component: PreviousComponent,
-//   },
-//   'useStateWithHistory': {
-//     component: StateWithHistoryComponent,
-//   },
-//   'useStorage': {
-//     component: StorageComponent,
-//   },
-//   'useAsync': {
-//     component: AsyncComponent,
-//   },
-//   'useFetch': {
-//     component: FetchComponent,
-//   },
-//   'useScript': {
-//     component: ScriptComponent,
-//   },
-//   'useEventListener': {
-//     component: EventListenerComponent,
-//   },
-//   'useIsAppOffline': {
-//     component: IsAppOfflineComponent,
-//   },
-//   'useWindowDimensions': {
-//     component: WindowDimensionsComponent,
-//   },
-//   'useGeolocation': {
-//     component: GeolocationComponent,
-//   },
-//   'useAsyncLoop': {
-//     component: AsyncLoopComponent,
-//   },
-//   'useWindowFocus': {
-//     component: WindowFocusComponent,
-//   },
-//   'useSubdomain': {
-//     component: SubdomainComponent,
-//   },
-//   'useCopyToClipboard': {
-//     component: CopyToClipboardComponent,
-//   },
-//   'useStateJson': {
-//     component: StateJsonComponent,
-//   },
-//   'useColorBlend': {
-//     component: ColorBlendComponent,
-//   },
-//   'useGroupByFirstLetter': {
-//     component: GroupByFirstLetterComponent,
-//   },
-//   'useScrollToTop': {
-//     component: ScrollToTopComponent,
-//   },
-// }

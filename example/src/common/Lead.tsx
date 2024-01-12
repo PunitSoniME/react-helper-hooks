@@ -3,10 +3,10 @@ import React from 'react'
 
 export default function Lead({ className, children, ...rest }: any) {
     return (
-        <p className={cn('text-xl text-muted-foreground', className)}
+        <pre className={cn('text-xl text-muted-foreground whitespace-pre-wrap', className)}
             {...rest}
         >
             {children}
-        </p>
+        </pre>
     )
 }
