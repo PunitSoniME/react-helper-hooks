@@ -22,7 +22,7 @@ const useSpeech = () => {
   let allTextNodes: any = [];
 
   const { state, play, resume, pause, cancel, load } = createSpeechEngine({
-    onResume: (event: any) => {},
+    onResume: () => {},
     onBoundary: (event) => {
       if (!parentNode) return;
 
@@ -46,7 +46,7 @@ const useSpeech = () => {
         allText.substring(wordEnd);
       if (parentNode) (parentNode as any).innerHTML = markedText;
     },
-    onEnd: (event: any) => {
+    onEnd: () => {
       if (parentNode) {
         parentNode.innerHTML = parentNode.innerHTML.replace(
           /(<mark[^>]*>|<\/mark>)/g,
