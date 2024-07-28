@@ -37,6 +37,7 @@ const AsyncComponent = lazy(() => import('@/hooks/useAsync'));
 const SpeechComponent = lazy(() => import('@/hooks/useSpeech'));
 const ProvidersTreeComponent = lazy(() => import('@/hooks/useProvidersTree'));
 const HashComponent = lazy(() => import('@/hooks/useHash'));
+const ClickOutsideComponent = lazy(() => import('@/hooks/useClickOutside'));
 
 export const hooks = [
   { key: 'useToggle', Component: ToggleComponent },
@@ -62,9 +63,10 @@ export const hooks = [
   { key: 'useColorBlend', Component: ColorBlendComponent },
   { key: 'useGroupByFirstLetter', Component: GroupByFirstLetterComponent },
   { key: 'useScrollToTop', Component: ScrollToTopComponent },
-  { key: 'useSpeech', Component: SpeechComponent, isNew: true },
-  { key: 'useProvidersTree', Component: ProvidersTreeComponent, isNew: true },
-  { key: 'useHash', Component: HashComponent, isNew: true }
+  { key: 'useSpeech', Component: SpeechComponent },
+  { key: 'useProvidersTree', Component: ProvidersTreeComponent },
+  { key: 'useHash', Component: HashComponent },
+  { key: 'useClickOutside', Component: ClickOutsideComponent, isNew: true }
 ];
 
 export const props = {

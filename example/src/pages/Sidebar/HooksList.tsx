@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { SheetClose } from '@/components/ui/sheet';
-import { cn, hooks, sortBasedOnString } from '@/lib/utils';
+import { hooks, sortBasedOnString } from '@/lib/utils';
 import { useHash } from '../../../..';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
