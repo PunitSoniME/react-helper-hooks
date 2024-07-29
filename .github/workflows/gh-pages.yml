@@ -18,7 +18,6 @@ jobs:
         run: yarn install && cd example && yarn install && yarn run build && cd dist
 
       - name: Publish current workdir (which contains generated content) to GitHub Pages
-        run: echo "switched `pwd`"
         uses: rayluo/github-pages-overwriter@v1.3
 
         with:
