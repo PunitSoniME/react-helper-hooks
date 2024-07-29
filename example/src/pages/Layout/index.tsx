@@ -1,11 +1,12 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useMemo } from 'react'
 import { useHash } from '../../../../.';
 import { hooks, props } from '@/lib/utils';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import classes from './Layout.module.css';
 import RedirectToExample from '@/common/Details/RedirectToExample';
 import { Sheet, SheetContent } from '@/components/ui/sheet';
-import Title from '@/common/Details/Title';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { AlertCircle } from 'lucide-react';
 
 const Header = lazy(() => import('../Header'));
 const Sidebar = lazy(() => import('../Sidebar'));
@@ -15,7 +16,20 @@ const LandingPage = lazy(() => import('../LandingPage'));
 export default function Layout() {
 
     const [hash,] = useHash();
-    const selectedHook: string = hash ? (hash as string).split('#')[1] : "";
+    // const selectedHook: string = hash ? (hash as string).split('#')[1] : "";
+
+    const selectedHook = useMemo(() => {
+        if (hash) {
+            const splittedHookName = (hash as string).split('#')[1];
+            if (splittedHookName) {
+                const splittedHookNameInLowerCase = splittedHookName.toLowerCase();
+                const hookDetails = hooks.find(f => f.key.toLowerCase() === splittedHookNameInLowerCase);
+                return hookDetails ? hookDetails?.key : splittedHookName;
+            }
+            return "";
+        }
+        return "";
+    }, [hash]);
 
     // @ts-ignore
     const Component = hooks.find(f => f.key === selectedHook)?.Component || null;
@@ -60,9 +74,10 @@ export default function Layout() {
                                                     <Component {...propsToPass} />
                                                     <RedirectToExample hook={selectedHook} />
                                                 </>
-                                                : <>
-                                                    {selectedHook} not found
-                                                </>
+                                                : <Alert variant="destructive">
+                                                    <AlertCircle className="h-4 w-4" />
+                                                    <AlertTitle>{selectedHook} hook not found</AlertTitle>
+                                                </Alert>
                                         }
                                     </Suspense>
                                 </div>

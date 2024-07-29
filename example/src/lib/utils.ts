@@ -5,7 +5,6 @@ import { twMerge } from "tailwind-merge"
 export const packageName = 'react-helper-hooks';
 
 export const githubUrl = 'https://github.com/PunitSoniME/react-helper-hooks';
-export const exampleMarkDownPrefixUrl = `${githubUrl}/blob/main/src/docs`;
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -38,6 +37,7 @@ const SpeechComponent = lazy(() => import('@/hooks/useSpeech'));
 const ProvidersTreeComponent = lazy(() => import('@/hooks/useProvidersTree'));
 const HashComponent = lazy(() => import('@/hooks/useHash'));
 const ClickOutsideComponent = lazy(() => import('@/hooks/useClickOutside'));
+const ColorSchemeComponent = lazy(() => import('@/hooks/useColorScheme'));
 
 export const hooks = [
   { key: 'useToggle', Component: ToggleComponent },
@@ -66,7 +66,8 @@ export const hooks = [
   { key: 'useSpeech', Component: SpeechComponent },
   { key: 'useProvidersTree', Component: ProvidersTreeComponent },
   { key: 'useHash', Component: HashComponent },
-  { key: 'useClickOutside', Component: ClickOutsideComponent, isNew: true }
+  { key: 'useClickOutside', Component: ClickOutsideComponent, isNew: true },
+  { key: 'useColorScheme', Component: ColorSchemeComponent, isNew: true }
 ];
 
 export const props = {

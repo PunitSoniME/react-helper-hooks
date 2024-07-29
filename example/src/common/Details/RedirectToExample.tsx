@@ -1,9 +1,10 @@
 import { Button } from '@/components/ui/button'
+import { githubUrl } from '@/lib/utils';
 import { MoveUpRightIcon } from 'lucide-react'
 
-const githubUrl = 'https://github.com/PunitSoniME/react-helper-hooks/blob/main'
-const hookCodeUrl = `${githubUrl}/src`;
-const exampleCodeUrl = `${githubUrl}/example/src/hooks`;
+const extendedGithubUrl = `${githubUrl}/blob/main`;
+const hookCodeUrl = `${extendedGithubUrl}/src`;
+const exampleCodeUrl = `${extendedGithubUrl}/example/src/hooks`;
 
 export default function RedirectToExample({ hook }: any) {
 
