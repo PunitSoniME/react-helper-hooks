@@ -18,6 +18,7 @@ jobs:
         run: yarn install && cd example && yarn install && yarn run build && cd ..
 
       - name: Publish current workdir (which contains generated content) to GitHub Pages
+        run: cd example/dist
         uses: rayluo/github-pages-overwriter@v1.3
 
         with:
@@ -31,7 +32,7 @@ jobs:
           # Such a directory does *not* have to already exist in your repo,
           # it could be an output directory created dynamically
           # by your static website builder.
-          source-directory: "example/dist"
+          source-directory: .
 
           # Optional. Default value "gh-pages".
           # It specifies the temporary branch which hosts the static website.
