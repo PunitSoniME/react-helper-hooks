@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "vite --open",
-    "build": "vite build"
+    "build": "vite build --base='/react-helper-hooks/'"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
