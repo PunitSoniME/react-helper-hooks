@@ -13,8 +13,8 @@ export default function HooksList() {
 
     const filteredComponents = components.filter(f => f.key.toLowerCase().includes(search.toLowerCase()));
 
-    const [hash, setHash] = useHash();
-    const selectedHook = hash ? hash.split('#')[1] : "";
+    const [hash, updateHash] = useHash();
+    const selectedHook = hash ? (hash as string).split('#')[1]?.toLowerCase() : "";
 
     return (
         <>
@@ -36,13 +36,13 @@ export default function HooksList() {
                             <Button
                                 className="font-normal justify-start"
                                 onClick={() => {
-                                    setHash(hook.key);
+                                    updateHash(hook.key);
                                 }}
-                                variant={selectedHook === hook.key ? 'default' : 'ghost'}
+                                variant={selectedHook === hook.key.toLowerCase() ? 'default' : 'ghost'}
                             >
                                 {hook.key} {
                                     hook.isNew
-                                        ? <span className={`ml-2 px-2 rounded-md ${selectedHook === hook.key ? 'bg-white text-blue-600' : 'bg-blue-600 text-white'}`}>New</span>
+                                        ? <span className={`ml-2 px-2 rounded-md ${selectedHook === hook.key.toLowerCase() ? 'bg-white text-blue-600' : 'bg-blue-600 text-white'}`}>New</span>
                                         : ""
                                 }
                             </Button>

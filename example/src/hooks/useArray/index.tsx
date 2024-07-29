@@ -27,16 +27,6 @@ export default function Component() {
     const { array, set, push, remove, filter, update, clear } = ${hook}([DATA]);
 }`
 
-const api = [
-    { execute: 'array', type: 'array', description: 'Data on which operation to perform' },
-    { execute: 'set', type: 'function', description: 'Re-initialize the array with new data' },
-    { execute: 'push', type: 'function', description: 'Insert an element in array' },
-    { execute: 'remove', type: 'function', description: 'Remove an element from array' },
-    { execute: 'filter', type: 'function', description: 'Filter out the data from array ( This will mutate the source )' },
-    { execute: 'update', type: 'function', description: 'Update any element of array' },
-    { execute: 'clear', type: 'function', description: 'Clear whole array' }
-];
-
 export default function ArrayComponent() {
 
     const { array, set, push, remove, filter, update, clear } = useArray([1, 2, 3, 4, 5, 6])

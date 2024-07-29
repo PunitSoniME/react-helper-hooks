@@ -26,5 +26,6 @@ export { default as useHash } from './useHash';
 export { default as useSpeech } from './useSpeech';
 export { default as useProvidersTree } from './useProvidersTree';
 export { default as useClickOutside } from './useClickOutside';
+export { default as useColorScheme } from './useColorScheme';
 
 export { useLocalStorage, useSessionStorage };
