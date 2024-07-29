@@ -3,6 +3,7 @@ import { useSpeech } from '../../../..';
 import { packageName } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Textarea } from "@/components/ui/textarea"
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
 const Block = lazy(() => import('@/common/Details/Block'));
 const Documentation = lazy(() => import('@/common/Documentation'));
@@ -36,6 +37,7 @@ export default function SpeechComponent() {
     const disableResumeButton = currentPlayingState !== 'paused';
     const disableStopButton = !(['playing', 'resumed', 'paused'].includes(currentPlayingState));
 
+    const isSpeechSynthesisSupported = 'speechSynthesis' in window;
 
     return (
         <Suspense fallback={<></>}>
@@ -45,54 +47,64 @@ export default function SpeechComponent() {
                 info={info}
                 usage={usage}
             >
+                {
+                    isSpeechSynthesisSupported ?
+                        <Block title='Example'>
 
-                <Block title='Example'>
+                            <Alert className='my-3 bg-green-400 text-green-900'>
+                                <AlertTitle>Yahooo...</AlertTitle>
+                                <AlertDescription>Your browser <b>supports</b> speech synthesis.</AlertDescription>
+                            </Alert>
 
-                    <Textarea
-                        defaultValue={text}
-                        className='mb-4'
-                        disabled={disablePlayButton}
-                        onChange={(e) => {
-                            setText(e.target.value);
-                        }} />
+                            <Textarea
+                                defaultValue={text}
+                                className='mb-4'
+                                disabled={disablePlayButton}
+                                onChange={(e) => {
+                                    setText(e.target.value);
+                                }} />
 
-                    <div className="flex gap-3 mb-2">
-                        <Button size="sm" disabled={disablePlayButton}
-                            onClick={() => {
-                                loadSpeech(document.getElementById('text-to-speech-content'), text);
-                                play();
-                            }}>Play</Button>
+                            <div className="flex gap-3 mb-2">
+                                <Button size="sm" disabled={disablePlayButton}
+                                    onClick={() => {
+                                        loadSpeech(document.getElementById('text-to-speech-content'), text);
+                                        play();
+                                    }}>Play</Button>
 
-                        <Button size="sm" disabled={disablePauseButton}
-                            onClick={() => {
-                                pause();
-                            }}>Pause</Button>
+                                <Button size="sm" disabled={disablePauseButton}
+                                    onClick={() => {
+                                        pause();
+                                    }}>Pause</Button>
 
-                        <Button size="sm" disabled={disableResumeButton}
-                            onClick={() => {
-                                resume();
-                            }}>Resume</Button>
+                                <Button size="sm" disabled={disableResumeButton}
+                                    onClick={() => {
+                                        resume();
+                                    }}>Resume</Button>
 
-                        <Button size="sm" variant="destructive"
-                            disabled={disableStopButton}
-                            onClick={() => {
-                                stop();
-                            }}>Stop</Button>
-                    </div>
+                                <Button size="sm" variant="destructive"
+                                    disabled={disableStopButton}
+                                    onClick={() => {
+                                        stop();
+                                    }}>Stop</Button>
+                            </div>
 
-                    <div className='flex justify-between flex-col items-start gap-3'>
+                            <div className='flex justify-between flex-col items-start gap-3'>
 
-                        <div id="text-to-speech-content"
-                            dangerouslySetInnerHTML={{
-                                __html: text
-                            }}
-                        >
-                        </div>
-                    </div>
+                                <div id="text-to-speech-content"
+                                    dangerouslySetInnerHTML={{
+                                        __html: text
+                                    }}
+                                >
+                                </div>
+                            </div>
 
-                </Block>
+                        </Block> : <Alert className="my-3" variant="destructive">
+                            <AlertTitle>Oooops...</AlertTitle>
+                            <AlertDescription>Your browser <b>sdoenn't supports</b> speech synthesis.</AlertDescription>
+                        </Alert>
+                }
             </Documentation>
 
-        </Suspense>
+        </Suspense >
     )
 }
