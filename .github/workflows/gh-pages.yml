@@ -14,8 +14,8 @@ jobs:
         # You may use a newer version of https://github.com/actions/checkout
         uses: actions/checkout@v4
 
-      - name: Generate your content
-        run: npm install && cd example && npm install && cd.. && npm run deploy
+      - name: Install Packages
+        run: npm install && cd example && npm install && npm run build
 
       - name: Publish current workdir (which contains generated content) to GitHub Pages
         uses: rayluo/github-pages-overwriter@v1.3
