@@ -15,26 +15,25 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install Packages
-        run: yarn install && cd example && yarn install && yarn run build && cd ..
+        run: yarn install && cd example && yarn install && yarn run build && cd dist
 
       - name: Publish current workdir (which contains generated content) to GitHub Pages
         uses: rayluo/github-pages-overwriter@v1.3
-          run: cd example/dist
 
-          with:
+        with:
 
-            # Optional.
-            #
-            # Default value "." means the root directory of your project will be published.
-            #
-            # You can use whatever directory your project uses,
-            # for example "wwwroot" (without leading "./").
-            # Such a directory does *not* have to already exist in your repo,
-            # it could be an output directory created dynamically
-            # by your static website builder.
-            source-directory: .
+          # Optional.
+          #
+          # Default value "." means the root directory of your project will be published.
+          #
+          # You can use whatever directory your project uses,
+          # for example "wwwroot" (without leading "./").
+          # Such a directory does *not* have to already exist in your repo,
+          # it could be an output directory created dynamically
+          # by your static website builder.
+          source-directory: .
 
-            # Optional. Default value "gh-pages".
-            # It specifies the temporary branch which hosts the static website.
-            # Each build will OVERWRITE this branch.
-            target-branch: gh-pages
+          # Optional. Default value "gh-pages".
+          # It specifies the temporary branch which hosts the static website.
+          # Each build will OVERWRITE this branch.
+          target-branch: gh-pages
