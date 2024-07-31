@@ -8,7 +8,7 @@ export default function Header() {
     const [, setHash] = useHash();
 
     return (
-        <div className='h-16 flex items-center px-4 bg-blue-600 sticky top-0 z-10 justify-between'>
+        <div className='h-16 flex items-center px-4 bg-primary sticky top-0 z-10 justify-between'>
             <Button variant="link" className='hover:no-underline p-0 font-bold text-xl tracking-wider text-white cursor-pointer'
                 onClick={() => {
                     //@ts-ignore

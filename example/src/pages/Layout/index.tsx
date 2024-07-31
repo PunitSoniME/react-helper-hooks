@@ -1,11 +1,11 @@
 import { lazy, Suspense, useMemo } from 'react'
-import { useHash } from '../../../../.';
+import { useHash } from '../../../..';
 import { hooks, props } from '@/lib/utils';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import classes from './Layout.module.css';
 import RedirectToExample from '@/common/Details/RedirectToExample';
 import { Sheet, SheetContent } from '@/components/ui/sheet';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Alert, AlertTitle } from '@/components/ui/alert';
 import { AlertCircle } from 'lucide-react';
 
 const Header = lazy(() => import('../Header'));
@@ -65,23 +65,21 @@ export default function Layout() {
 
                     {
                         hash ?
-                            <ScrollArea className="w-full rounded-none">
-                                <div className='px-4 pt-2 pb-32'>
-                                    <Suspense fallback={<></>}>
-                                        {
-                                            Component
-                                                ? <>
-                                                    <Component {...propsToPass} />
-                                                    <RedirectToExample hook={selectedHook} />
-                                                </>
-                                                : <Alert variant="destructive">
-                                                    <AlertCircle className="h-4 w-4" />
-                                                    <AlertTitle>{selectedHook} hook not found</AlertTitle>
-                                                </Alert>
-                                        }
-                                    </Suspense>
-                                </div>
-                            </ScrollArea>
+                            <div className='px-4 pt-2 pb-32 overflow-x-auto'>
+                                <Suspense fallback={<></>}>
+                                    {
+                                        Component
+                                            ? <>
+                                                <Component {...propsToPass} />
+                                                <RedirectToExample hook={selectedHook} />
+                                            </>
+                                            : <Alert variant="destructive">
+                                                <AlertCircle className="h-4 w-4" />
+                                                <AlertTitle>{selectedHook} hook not found</AlertTitle>
+                                            </Alert>
+                                    }
+                                </Suspense>
+                            </div>
                             : <Suspense>
                                 <LandingPage />
                             </Suspense>

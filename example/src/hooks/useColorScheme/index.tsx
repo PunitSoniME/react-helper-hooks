@@ -1,8 +1,7 @@
 import { lazy, Suspense } from 'react';
-import { useColorScheme } from '../../../../';
 import { packageName } from '@/lib/utils';
+import Demo from './Demo';
 
-const Block = lazy(() => import('@/common/Details/Block'));
 const Documentation = lazy(() => import('@/common/Documentation'));
 
 const hook = 'useColorScheme';
@@ -10,16 +9,14 @@ const info = "Use this hook to get the current color scheme either 'dark' or 'li
 
 const usage: string = `import { ${hook} } from '${packageName}';
 
-export default function Component() {
-    /*
-        @returns - Current color scheme
-    */
-    const colorScheme = ${hook}();
-}`
+const colorScheme = ${hook}();
+
+/*
+    @returns - Current color scheme - 'light' or 'dark'
+*/`;
 
 export default function ColorSchemeComponent() {
 
-    const colorScheme = useColorScheme();
 
     return (
         <Suspense fallback={<></>}>
@@ -29,12 +26,7 @@ export default function ColorSchemeComponent() {
                 info={info}
                 usage={usage}
             >
-
-                <Block title='Example'>
-
-                    Current color scheme is - <b>{colorScheme}</b>
-
-                </Block>
+                <Demo />
             </Documentation>
 
         </Suspense>

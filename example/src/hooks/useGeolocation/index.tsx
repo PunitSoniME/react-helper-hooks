@@ -1,8 +1,7 @@
 import { lazy, Suspense } from 'react';
-import { useGeolocation } from '../../../..';
 import { packageName } from '@/lib/utils';
+import Demo from './Demo';
 
-const Block = lazy(() => import('@/common/Details/Block'));
 const Documentation = lazy(() => import('@/common/Documentation'));
 
 const hook = 'useGeolocation';
@@ -10,21 +9,18 @@ const info = 'Get the geolocation ';
 
 const usage: string = `import { ${hook} } from '${packageName}';
 
-export default function Component() {
-    /*
-        @params - Object ( Type of PositionOptions )
+const { loading, error, data: { latitude, longitude } } = ${hook}();
 
-        @returns
-            loading - Boolean -Loading state ( true or false )
-            data - { latitude, longitude } - latitude and longitude of user
-            error - any - Data we get when async process rejected
-    */
-    const { loading, error, data: { latitude, longitude } } = ${hook}();
-}`
+/*
+    @params - Object ( Type of PositionOptions )
 
-export default function FetchComponent() {
+    @returns
+        loading - Boolean -Loading state ( true or false )
+        data - { latitude, longitude } - latitude and longitude of user
+        error - any - Data we get when async process rejected
+*/`
 
-    const { loading, error, data: { latitude, longitude } } = useGeolocation();
+export default function GeoLocationComponent() {
 
     return (
         <Suspense fallback={<></>}>
@@ -34,24 +30,7 @@ export default function FetchComponent() {
                 info={info}
                 usage={usage}
             >
-                <Block title='Example'>
-
-                    <div className="flex flex-col flex-wrap gap-3 mt-2">
-
-                        <div>Loading: {loading?.toString()}</div>
-
-                        <div className='text-green-600 font-semibold'>
-                            latitude: {latitude}
-                            <br />
-                            longitude: {longitude}
-                        </div>
-
-                        <div className='text-red-600 font-semibold'>
-                            {error?.message}
-                        </div>
-
-                    </div>
-                </Block>
+                <Demo />
 
             </Documentation>
 

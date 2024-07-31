@@ -18,7 +18,11 @@
     "clsx": "^2.1.0",
     "lucide-react": "^0.306.0",
     "react-app-polyfill": "^3.0.0",
-    "react-code-blocks": "^0.1.5",
+    "rehype-pretty-code": "^0.13.2",
+    "rehype-stringify": "^10.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.0",
+    "shiki": "^1.12.0",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7"
   },
