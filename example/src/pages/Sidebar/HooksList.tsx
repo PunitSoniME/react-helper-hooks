@@ -42,7 +42,7 @@ export default function HooksList() {
                             >
                                 {hook.key} {
                                     hook.isNew
-                                        ? <span className={`ml-2 px-2 rounded-md ${selectedHook === hook.key.toLowerCase() ? 'bg-white text-blue-600' : 'bg-blue-600 text-white'}`}>New</span>
+                                        ? <span className={`ml-2 px-2 rounded-md ${selectedHook === hook.key.toLowerCase() ? 'bg-white text-primary' : 'bg-primary text-white'}`}>New</span>
                                         : ""
                                 }
                             </Button>

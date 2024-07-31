@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Muted from '@/common/Muted'
 import { Check, Copy } from 'lucide-react'
-import { useCopyToClipboard } from '../../../../'
+import { useCopyToClipboard } from '../../../..'
 import { packageName } from '@/lib/utils'
 
 const npmUrl = 'https://www.npmjs.org/package/react-helper-hooks';
@@ -12,7 +12,7 @@ const InstallationCommand = ({ packageManager, installationCommand }: any) => {
 
     const [isCopied, setIsCopied] = useState(false);
 
-    return <div className="flex items-center tracking-wide gap-8 py-2 px-4 bg-slate-800 rounded text-white justify-between">
+    return <div className="flex items-center gap-8 py-2 px-4 bg-slate-800 rounded text-white justify-between">
         <p>{command}</p>
 
         {
@@ -32,7 +32,7 @@ const InstallationCommand = ({ packageManager, installationCommand }: any) => {
 }
 
 const BlockTitle = ({ children }: any) => {
-    return <span className='font-bold text-xl tracking-wider text-blue-600'>
+    return <span className='font-bold text-xl tracking-wider text-primary'>
         {children}
     </span>
 }

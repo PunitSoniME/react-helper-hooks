@@ -1,11 +1,7 @@
-import { lazy, Suspense, useState } from 'react';
-import { useClickOutside } from '../../../../';
+import { lazy, Suspense } from 'react';
 import { packageName } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { AlertCircle } from 'lucide-react';
+import Demo from './Demo';
 
-const Block = lazy(() => import('@/common/Details/Block'));
 const Documentation = lazy(() => import('@/common/Documentation'));
 
 const hook = 'useClickOutside';
@@ -13,18 +9,15 @@ const info = "The 'useClickOutside' hook is a custom React hook designed to hand
 
 const usage: string = `import { ${hook} } from '${packageName}';
 
-export default function Component() {
-    /*
-        @returns
-            ref - Returns ref to handle the click outside functionality
-    */
-    const ref = ${hook}(CALLBACK_FUNCTION);
-}`
+const ref = ${hook}(CALLBACK_FUNCTION);
+
+/*
+    @returns
+        ref - Returns ref to handle the click outside functionality
+*/`
 
 export default function ClickOutsideComponent() {
 
-    const [visible, setVisible] = useState(false);
-    const ref = useClickOutside(() => { setVisible(false) });
 
     return (
         <Suspense fallback={<></>}>
@@ -34,26 +27,7 @@ export default function ClickOutsideComponent() {
                 info={info}
                 usage={usage}
             >
-
-                <Block title='Example'>
-
-                    <div className='flex justify-between flex-col items-start gap-3'>
-
-                        <Button type="button" onClick={() => {
-                            setVisible(true);
-                        }}>Click to see the alert</Button>
-
-                        {
-                            visible ? <Alert ref={ref} variant="destructive">
-                                <AlertCircle className="h-4 w-4" />
-                                <AlertTitle>This is alert</AlertTitle>
-                                <AlertDescription>Click Outside to close this alert</AlertDescription>
-                            </Alert> : ""
-                        }
-
-                    </div>
-
-                </Block>
+                <Demo />
             </Documentation>
 
         </Suspense>

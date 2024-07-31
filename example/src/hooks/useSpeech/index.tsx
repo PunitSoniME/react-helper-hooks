@@ -1,11 +1,7 @@
-import { lazy, Suspense, useState } from 'react';
-import { useSpeech } from '../../../..';
+import { lazy, Suspense } from 'react';
 import { packageName } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import { Textarea } from "@/components/ui/textarea"
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import Demo from './Demo';
 
-const Block = lazy(() => import('@/common/Details/Block'));
 const Documentation = lazy(() => import('@/common/Documentation'));
 
 const hook = 'useSpeech';
@@ -13,31 +9,19 @@ const info = 'Helps you implement speeching facility';
 
 const usage: string = `import { ${hook} } from '${packageName}';
 
-export default function Component() {
-    /*
-        @returns
-            loadSpeech - function - This function accepts 2 parameters, 1st one is HTMLElement, 2nd one is string, you can pass anyone of them at a time
-            play - function - Call this function to start the speech, before calling this function, make sure you call loadSpeech first
-            resume - function - Call this function to resume the speech
-            pause - function - Call this function to pause the speech
-            stop - function - Call this function to stop the speech
-            currentPlayingState - string - Current playing state among these - initialized | playing | paused | ended | resumed
-            
-    */
-    const { play, resume, pause, stop, loadSpeech, currentPlayingState } = ${hook}();
-}`
+const { play, resume, pause, stop, loadSpeech, currentPlayingState } = ${hook}();
+
+/*
+    @returns
+        loadSpeech - function - This function accepts 2 parameters, 1st one is HTMLElement, 2nd one is string, you can pass anyone of them at a time
+        play - function - Call this function to start the speech, before calling this function, make sure you call loadSpeech first
+        resume - function - Call this function to resume the speech
+        pause - function - Call this function to pause the speech
+        stop - function - Call this function to stop the speech
+        currentPlayingState - string - Current playing state among these - initialized | playing | paused | ended | resumed
+*/`
 
 export default function SpeechComponent() {
-
-    const [text, setText] = useState("Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nam veritatis incidunt debitis. Repellendus at corrupti odit, nam deleniti cum fugiat temporibus libero suscipit harum fugit aliquid saepe minima ipsam.");
-    const { play, resume, pause, stop, loadSpeech, currentPlayingState } = useSpeech();
-
-    const disablePlayButton = !(currentPlayingState === 'initialized');
-    const disablePauseButton = !(['playing', 'resumed'].includes(currentPlayingState));
-    const disableResumeButton = currentPlayingState !== 'paused';
-    const disableStopButton = !(['playing', 'resumed', 'paused'].includes(currentPlayingState));
-
-    const isSpeechSynthesisSupported = 'speechSynthesis' in window;
 
     return (
         <Suspense fallback={<></>}>
@@ -47,64 +31,9 @@ export default function SpeechComponent() {
                 info={info}
                 usage={usage}
             >
-                {
-                    isSpeechSynthesisSupported ?
-                        <Block title='Example'>
-
-                            <Alert className='my-3 bg-green-400 text-green-900'>
-                                <AlertTitle>Yahooo...</AlertTitle>
-                                <AlertDescription>Your browser <b>supports</b> speech synthesis.</AlertDescription>
-                            </Alert>
-
-                            <Textarea
-                                defaultValue={text}
-                                className='mb-4'
-                                disabled={disablePlayButton}
-                                onChange={(e) => {
-                                    setText(e.target.value);
-                                }} />
-
-                            <div className="flex gap-3 mb-2">
-                                <Button size="sm" disabled={disablePlayButton}
-                                    onClick={() => {
-                                        loadSpeech(document.getElementById('text-to-speech-content'), text);
-                                        play();
-                                    }}>Play</Button>
-
-                                <Button size="sm" disabled={disablePauseButton}
-                                    onClick={() => {
-                                        pause();
-                                    }}>Pause</Button>
-
-                                <Button size="sm" disabled={disableResumeButton}
-                                    onClick={() => {
-                                        resume();
-                                    }}>Resume</Button>
-
-                                <Button size="sm" variant="destructive"
-                                    disabled={disableStopButton}
-                                    onClick={() => {
-                                        stop();
-                                    }}>Stop</Button>
-                            </div>
-
-                            <div className='flex justify-between flex-col items-start gap-3'>
-
-                                <div id="text-to-speech-content"
-                                    dangerouslySetInnerHTML={{
-                                        __html: text
-                                    }}
-                                >
-                                </div>
-                            </div>
-
-                        </Block> : <Alert className="my-3" variant="destructive">
-                            <AlertTitle>Oooops...</AlertTitle>
-                            <AlertDescription>Your browser <b>sdoenn't supports</b> speech synthesis.</AlertDescription>
-                        </Alert>
-                }
+                <Demo />
             </Documentation>
 
-        </Suspense >
+        </Suspense>
     )
 }
