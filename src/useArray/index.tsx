@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+/**
+ * @since 1.0.0
+ */
 export default function useArray<T>(defaultValue: T[]) {
   const [array, setArray] = useState(defaultValue);
 

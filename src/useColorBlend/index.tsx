@@ -1,6 +1,5 @@
-/*
- * rgbA, rebB - Array of integer or string values
- * Values must be between 0 to 255
+/**
+ * @since 1.6.0
  */
 export default function useColorBlend(rgbA: number[], rgbB: number[]) {
   const colorChannelMixer = (colorA: number, colorB: number) => {

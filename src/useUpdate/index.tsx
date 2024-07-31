@@ -1,5 +1,8 @@
 import { useRef, useEffect } from 'react';
 
+/**
+ * @since 1.0.0
+ */
 export default function useUpdateEffect(
   callback: Function,
   dependencies: any[]

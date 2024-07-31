@@ -1,5 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 
+/**
+ * @since 1.11.0
+ */
 export default function useProvidersTree() {
   const buildProviders = (componentsWithProps: any) => {
     const initialComponent = ({ children }: any) => <>{children}</>;

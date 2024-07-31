@@ -18,7 +18,6 @@ const ref = ${hook}(CALLBACK_FUNCTION);
 
 export default function ClickOutsideComponent() {
 
-
     return (
         <Suspense fallback={<></>}>
 
@@ -26,6 +25,7 @@ export default function ClickOutsideComponent() {
                 hook={hook}
                 info={info}
                 usage={usage}
+                version="1.12.0"
             >
                 <Demo />
             </Documentation>

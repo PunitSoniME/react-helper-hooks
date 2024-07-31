@@ -2,6 +2,9 @@ import { useEffect, useRef } from 'react';
 
 const DEFAULT_EVENTS = ['mouseup', 'touchend'];
 
+/**
+ * @since 1.12.0
+ */
 export default function useClickOutside(
   callback: Function,
   events?: string[] | null | undefined

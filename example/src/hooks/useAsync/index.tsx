@@ -31,6 +31,7 @@ export default function AsyncComponent() {
                 hook={hook}
                 info={info}
                 usage={usage}
+                version="1.1.0"
             >
                 <Demo />
             </Documentation>

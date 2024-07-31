@@ -2,7 +2,6 @@ import { lazy, Suspense } from 'react';
 import { packageName } from '@/lib/utils';
 import Demo from './Demo';
 
-
 const Documentation = lazy(() => import('@/common/Documentation'));
 
 const hook = 'useArray';
@@ -35,10 +34,9 @@ export default function ArrayComponent() {
                 hook={hook}
                 info={info}
                 usage={usage}
+                version="1.0.0"
             >
-
                 <Demo />
-
             </Documentation>
         </Suspense>
     )

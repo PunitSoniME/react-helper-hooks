@@ -1,4 +1,7 @@
 /*  eslint-disable */
+/**
+ * @since 1.5.0
+ */
 export default function useCopyToClipboard() {
   const copyToClipboard = async (textToCopy: string) => {
     return new Promise(async (resolve, reject) => {

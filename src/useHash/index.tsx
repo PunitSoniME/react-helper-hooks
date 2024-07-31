@@ -1,5 +1,8 @@
 import React from 'react';
 
+/**
+ * @since 1.10.1
+ */
 export default function useHash() {
   const [hash, setHash] = React.useState(() => window.location.hash);
 

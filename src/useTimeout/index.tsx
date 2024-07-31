@@ -1,5 +1,8 @@
 import { useRef, useEffect, useCallback } from 'react';
 
+/**
+ * @since 1.0.0
+ */
 export default function useTimeout(callback: Function, delay: number) {
   const callbackRef = useRef(callback);
   const timeoutRef = useRef();

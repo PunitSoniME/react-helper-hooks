@@ -1,5 +1,8 @@
 import { useEffect, useRef } from 'react';
 
+/**
+ * @since 1.2.0
+ */
 export default function useEventListener(
   eventType: any,
   callback: Function,
