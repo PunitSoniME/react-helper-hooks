@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 
+/**
+ * @since 1.12.0
+ */
 export default function useColorScheme() {
   const isDarkMode =
     window.matchMedia &&

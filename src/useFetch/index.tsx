@@ -4,6 +4,9 @@ const DEFAULT_OPTIONS = {
   headers: { 'Content-Type': 'application/json' },
 };
 
+/**
+ * @since 1.2.0
+ */
 export default function useFetch(
   url: string,
   options = {},

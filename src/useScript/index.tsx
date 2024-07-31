@@ -1,5 +1,8 @@
 import useAsync from '../useAsync';
 
+/**
+ * @since 1.2.0
+ */
 export default function useScript(url: string) {
   return useAsync(() => {
     const script = document.createElement('script');

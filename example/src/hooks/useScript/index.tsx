@@ -29,6 +29,7 @@ export default function ScriptComponent() {
                 hook={hook}
                 info={info}
                 usage={usage}
+                version="1.2.0"
             >
                 <Demo />
             </Documentation>

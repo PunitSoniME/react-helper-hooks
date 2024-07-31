@@ -26,6 +26,7 @@ export default function EventListenerComponent() {
                 hook={hook}
                 info={info}
                 usage={usage}
+                version="1.2.0"
             >
                 <Demo />
 

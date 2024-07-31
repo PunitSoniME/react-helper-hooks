@@ -25,6 +25,7 @@ export default function ScrollToTopComponent() {
                 hook={hook}
                 info={info}
                 usage={usage}
+                version="1.7.0"
             >
                 <Demo />
             </Documentation>

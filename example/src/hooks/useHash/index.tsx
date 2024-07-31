@@ -26,6 +26,7 @@ export default function HashComponent() {
                 hook={hook}
                 info={info}
                 usage={usage}
+                version="1.10.1"
             >
                 <Demo />
             </Documentation>

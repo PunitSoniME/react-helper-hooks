@@ -1,3 +1,6 @@
+/**
+ * @since 1.7.0
+ */
 export default function useScrollToTop() {
   const scrollToTop = (elementId?: string) => {
     if (elementId) {

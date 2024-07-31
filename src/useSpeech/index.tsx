@@ -4,6 +4,9 @@ import { PlayingState } from './utils';
 
 const playingState: PlayingState = 'initialized';
 
+/**
+ * @since 1.10.1
+ */
 const useSpeech = () => {
   /*
   Implement a custom useSpeech hook that uses a speech engine defined in 'speech.ts'

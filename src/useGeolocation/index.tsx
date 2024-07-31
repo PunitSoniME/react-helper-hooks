@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 
+/**
+ * @since 1.5.0
+ */
 export default function useGeolocation(options: PositionOptions = {}) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<any>();

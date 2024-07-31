@@ -1,3 +1,6 @@
+/**
+ * @since 1.6.0
+ */
 export default function useGroupByFirstLetter() {
   const groupByFirstLetter = (data: any[], propertyName: any) => {
     const groupByData = data.reduce((r, e) => {

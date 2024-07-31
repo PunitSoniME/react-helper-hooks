@@ -1,5 +1,8 @@
 import { useCallback, useRef, useState } from 'react';
 
+/**
+ * @since 1.0.0
+ */
 export default function useStateWithHistory(
   defaultValue: any,
   { capacity = 10 } = {}

@@ -30,6 +30,7 @@ export default function SpeechComponent() {
                 hook={hook}
                 info={info}
                 usage={usage}
+                version="1.10.1"
             >
                 <Demo />
             </Documentation>

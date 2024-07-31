@@ -4,13 +4,20 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 const Title = lazy(() => import('@/common/Details/Title'));
 const CodeSample = lazy(() => import('@/common/CodeSample'));
 
-export default function Documentation({ hook, info, usage, children }: any) {
+export default function Documentation({ hook, info, usage, version, children }: any) {
     const [activeTab, setActiveTab] = useState('docs');
 
     return (
         <>
             <Suspense fallback={<></>}>
-                <Title>{hook}</Title>
+                <div className='flex items-center gap-3'>
+                    <Title>{hook}</Title>
+                    {
+                        version
+                            ? <code className='text-primary text-sm'>since v{version}</code>
+                            : ""
+                    }
+                </div>
             </Suspense>
 
             <Suspense fallback={<>Loading Code Block</>}>

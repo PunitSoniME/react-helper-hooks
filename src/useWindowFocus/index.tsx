@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 
+/**
+ * @since 1.5.0
+ */
 export default function useWindowFocus() {
   const [focus, setFocus] = useState(document.hasFocus());
 

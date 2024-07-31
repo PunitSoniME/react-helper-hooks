@@ -1,5 +1,8 @@
 import { useEffect, useCallback, useState } from 'react';
 
+/**
+ * @since 1.1.0
+ */
 export default function useAsync(callback: Function, dependencies: any = []) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
