@@ -32,7 +32,6 @@ export default function WindowDimensionsComponent() {
                 hook={hook}
                 info={info}
                 usage={usage}
-                version="1.3.0"
             >
                 <Demo />
             </Documentation>

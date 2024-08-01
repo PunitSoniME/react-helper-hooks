@@ -1,11 +1,14 @@
 import React, { lazy, Suspense, useState } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { hooks } from '@/lib/utils';
 
 const Title = lazy(() => import('@/common/Details/Title'));
 const CodeSample = lazy(() => import('@/common/CodeSample'));
 
-export default function Documentation({ hook, info, usage, version, children }: any) {
+export default function Documentation({ hook, info, usage, children }: any) {
+
     const [activeTab, setActiveTab] = useState('docs');
+    const hookAvailableSinceVersion = hooks.find(f => f.key === hook)?.version || "";
 
     return (
         <>
@@ -13,8 +16,8 @@ export default function Documentation({ hook, info, usage, version, children }: 
                 <div className='flex items-center gap-3'>
                     <Title>{hook}</Title>
                     {
-                        version
-                            ? <code className='text-primary text-sm'>since v{version}</code>
+                        hookAvailableSinceVersion
+                            ? <code className='text-primary text-sm'>since v{hookAvailableSinceVersion}</code>
                             : ""
                     }
                 </div>

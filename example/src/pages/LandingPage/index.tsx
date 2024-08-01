@@ -1,58 +1,39 @@
-import { useState } from 'react'
 import Muted from '@/common/Muted'
-import { Check, Copy } from 'lucide-react'
-import { useCopyToClipboard } from '../../../..'
-import { packageName } from '@/lib/utils'
+import CodeSample from '@/common/CodeSample'
+import Title from '@/common/Details/Title';
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from "@/components/ui/table"
+import { groupByBasedOnKey, hooks } from '@/lib/utils';
+import { useHash } from '../../../..';
 
 const npmUrl = 'https://www.npmjs.org/package/react-helper-hooks';
 
-const InstallationCommand = ({ packageManager, installationCommand }: any) => {
-    const copyToClipboard = useCopyToClipboard();
-    const command = `${packageManager} ${installationCommand} ${packageName}`;
-
-    const [isCopied, setIsCopied] = useState(false);
-
-    return <div className="flex items-center gap-8 py-2 px-4 bg-slate-800 rounded text-white justify-between">
-        <p>{command}</p>
-
-        {
-            isCopied ? <Check size={20} /> : <Copy
-                size={20}
-                className='cursor-pointer'
-                onClick={() => {
-                    copyToClipboard(command);
-                    setIsCopied(true);
-
-                    setTimeout(() => {
-                        setIsCopied(false)
-                    }, 3000)
-                }} />
-        }
-    </div>
-}
-
-const BlockTitle = ({ children }: any) => {
-    return <span className='font-bold text-xl tracking-wider text-primary'>
-        {children}
-    </span>
-}
+const hooksList = Object.entries(groupByBasedOnKey(hooks, 'version'));
 
 export default function LandingPage() {
 
+    const [, updateHash] = useHash();
+
     return (
-        <div className='p-4 space-y-10'>
+        <div className='p-4 space-y-7'>
             <div className='flex gap-6 flex-col'>
                 <div>
-                    <BlockTitle>React Helper Hooks</BlockTitle>
+                    <Title>React Helper Hooks</Title>
                     <Muted>Custom React Helper Hooks to save hours of developers</Muted>
                 </div>
 
                 <div className='flex flex-col gap-3'>
 
-                    <BlockTitle>Installation Command</BlockTitle>
+                    <Title>Installation Command</Title>
 
-                    <InstallationCommand key="yarn" packageManager="yarn" installationCommand="add" />
-                    <InstallationCommand key="npm" packageManager="npm" installationCommand="i" />
+                    <CodeSample code="npm i react-helper-hooks" allowCopy={true} />
+                    <CodeSample code="yarn add react-helper-hooks" allowCopy={true} />
 
                 </div>
             </div>
@@ -87,6 +68,41 @@ export default function LandingPage() {
                         <img key={index} src={link} alt={link} />
                     ))
                 }
+            </div>
+
+            <div>
+                <Title>Hooks available since versions</Title>
+
+                <Table>
+                    <TableHeader>
+                        <TableRow>
+                            <TableHead className="w-[100px]">Version</TableHead>
+                            <TableHead>Hooks</TableHead>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                        {
+                            hooksList.map((hookDetail: any) => (
+                                <TableRow key={hookDetail[0]}>
+                                    <TableCell className="font-medium">
+                                        {hookDetail[0]}
+                                    </TableCell>
+                                    <TableCell className='flex gap-2 flex-wrap'>
+                                        {
+                                            hookDetail[1].map((m: any) => {
+                                                return <span key={m.key} className="cursor-pointer text-blue-700" onClick={() => {
+                                                    updateHash(m.key);
+                                                }}>{m.key},</span>
+                                            })
+                                        }
+                                    </TableCell>
+                                </TableRow>
+                            ))
+                        }
+
+                    </TableBody>
+                </Table>
+
             </div>
 
         </div>

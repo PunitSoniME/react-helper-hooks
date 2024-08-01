@@ -25,7 +25,6 @@ export default function SubdomainComponent() {
                 hook={hook}
                 info={info}
                 usage={usage}
-                version="1.5.3"
             >
                 <Demo />
             </Documentation>

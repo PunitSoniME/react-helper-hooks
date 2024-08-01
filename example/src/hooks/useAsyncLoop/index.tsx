@@ -31,7 +31,6 @@ export default function AsyncLoopComponent() {
                 hook={hook}
                 info={info}
                 usage={usage}
-                version="1.5.0"
             >
                 <Demo />
             </Documentation>

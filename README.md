@@ -65,23 +65,24 @@ yarn add react-helper-hooks
 - useUpdateEffect - [![][documentation-demo]](https://punitsonime.github.io/react-helper-hooks/#useUpdateEffect)
 - useWindowDimensions - [![][documentation-demo]](https://punitsonime.github.io/react-helper-hooks/#useWindowDimensions)
 - useWindowFocus - [![][documentation-demo]](https://punitsonime.github.io/react-helper-hooks/#useWindowFocus)
+- useProvidersTree - [![][documentation-demo]](https://punitsonime.github.io/react-helper-hooks/#useProvidersTree)
+- useHash - [![][documentation-demo]](https://punitsonime.github.io/react-helper-hooks/#useHash)
+- useClickOutside - [![][documentation-demo]](https://punitsonime.github.io/react-helper-hooks/#useClickOutside)
+- useColorScheme - [![][documentation-demo]](https://punitsonime.github.io/react-helper-hooks/#useColorScheme)
+- useElementSize - [![][documentation-demo]](https://punitsonime.github.io/react-helper-hooks/#useElementSize)
+- useResizeObserver - [![][documentation-demo]](https://punitsonime.github.io/react-helper-hooks/#useResizeObserver)
+
 
 
 -----------------------------
 
 <br />
 
-### More hooks comming soon
 
+## Follow me on 
+[![Twitter URL](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/PunitSoniME)
+[![Linkedin URL](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/PunitSoniME)
 
-<br />
-
-## Follow me on [![Twitter URL](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/PunitSoniME)
-
-
-## Follow me on [![Linkedin URL](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/PunitSoniME)
-
-<br />
 
 ## License
 

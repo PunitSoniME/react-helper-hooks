@@ -2,7 +2,6 @@ import { lazy, Suspense, useMemo } from 'react'
 import { useHash } from '../../../..';
 import { hooks, props } from '@/lib/utils';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import classes from './Layout.module.css';
 import RedirectToExample from '@/common/Details/RedirectToExample';
 import { Sheet, SheetContent } from '@/components/ui/sheet';
 import { Alert, AlertTitle } from '@/components/ui/alert';
@@ -16,7 +15,6 @@ const LandingPage = lazy(() => import('../LandingPage'));
 export default function Layout() {
 
     const [hash,] = useHash();
-    // const selectedHook: string = hash ? (hash as string).split('#')[1] : "";
 
     const selectedHook = useMemo(() => {
         if (hash) {
@@ -41,17 +39,18 @@ export default function Layout() {
         <div>
             <Sheet>
 
-                <Suspense fallback={<></>}>
-                    <Header />
-                </Suspense>
+                <nav className="fixed bottom-[calc(100vh-theme(spacing.16))] left-0 right-0 top-0 z-50">
+                    <Suspense fallback={<></>}>
+                        <Header />
+                    </Suspense>
+                </nav>
 
-                <div className={`${classes.main_height} grid md:grid-cols-[250px_1fr] grid-cols-1`}>
-
-                    <div className="hidden md:block">
+                <div className="flex min-h-screen md:divide-x container px-0 md:px-4 mt-2">
+                    <aside className="sticky top-16 h-[calc(100vh-theme(spacing.16))] w-[250px] hidden md:block">
                         <Suspense fallback={<></>}>
                             <Sidebar />
                         </Suspense>
-                    </div>
+                    </aside>
 
                     <SheetContent className="w-[300px] px-2">
                         <ScrollArea className='h-full'>
@@ -63,27 +62,27 @@ export default function Layout() {
                         </ScrollArea>
                     </SheetContent>
 
-                    {
-                        hash ?
-                            <div className='px-4 pt-2 pb-32 overflow-x-auto'>
+                    <main className="flex-1 mt-14 pr-4 overflow-x-auto">
+                        {
+                            hash ?
                                 <Suspense fallback={<></>}>
                                     {
                                         Component
-                                            ? <>
+                                            ? <div className="p-4">
                                                 <Component {...propsToPass} />
                                                 <RedirectToExample hook={selectedHook} />
-                                            </>
+                                            </div>
                                             : <Alert variant="destructive">
                                                 <AlertCircle className="h-4 w-4" />
                                                 <AlertTitle>{selectedHook} hook not found</AlertTitle>
                                             </Alert>
                                     }
                                 </Suspense>
-                            </div>
-                            : <Suspense>
-                                <LandingPage />
-                            </Suspense>
-                    }
+                                : <Suspense>
+                                    <LandingPage />
+                                </Suspense>
+                        }
+                    </main>
                 </div>
 
             </Sheet>

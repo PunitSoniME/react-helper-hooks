@@ -24,7 +24,6 @@ export default function ColorSchemeComponent() {
                 hook={hook}
                 info={info}
                 usage={usage}
-                version="1.12.0"
             >
                 <Demo />
             </Documentation>

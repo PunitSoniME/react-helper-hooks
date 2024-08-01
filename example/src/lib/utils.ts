@@ -42,36 +42,36 @@ const ElementSizeComponent = lazy(() => import('@/hooks/useElementSize'));
 const ResizeObserverComponent = lazy(() => import('@/hooks/useResizeObserver'));
 
 export const hooks = [
-  { key: 'useToggle', Component: ToggleComponent },
-  { key: 'useTimeout', Component: TimeoutComponent },
-  { key: 'useDebounce', Component: DebounceComponent },
-  { key: 'useUpdateEffect', Component: UpdateEffectComponent },
-  { key: 'useArray', Component: ArrayComponent },
-  { key: 'usePrevious', Component: PreviousComponent },
-  { key: 'useStateWithHistory', Component: StateWithHistoryComponent },
-  { key: 'useStorage', Component: StorageComponent },
-  { key: 'useAsync', Component: AsyncComponent },
-  { key: 'useFetch', Component: FetchComponent },
-  { key: 'useScript', Component: ScriptComponent },
-  { key: 'useEventListener', Component: EventListenerComponent },
-  { key: 'useIsAppOffline', Component: IsAppOfflineComponent },
-  { key: 'useWindowDimensions', Component: WindowDimensionsComponent },
-  { key: 'useGeolocation', Component: GeolocationComponent },
-  { key: 'useAsyncLoop', Component: AsyncLoopComponent },
-  { key: 'useWindowFocus', Component: WindowFocusComponent },
-  { key: 'useSubdomain', Component: SubdomainComponent },
-  { key: 'useCopyToClipboard', Component: CopyToClipboardComponent },
-  { key: 'useStateJson', Component: StateJsonComponent },
-  { key: 'useColorBlend', Component: ColorBlendComponent },
-  { key: 'useGroupByFirstLetter', Component: GroupByFirstLetterComponent },
-  { key: 'useScrollToTop', Component: ScrollToTopComponent },
-  { key: 'useSpeech', Component: SpeechComponent },
-  { key: 'useProvidersTree', Component: ProvidersTreeComponent },
-  { key: 'useHash', Component: HashComponent },
-  { key: 'useClickOutside', Component: ClickOutsideComponent, isNew: true },
-  { key: 'useColorScheme', Component: ColorSchemeComponent, isNew: true },
-  { key: 'useElementSize', Component: ElementSizeComponent, isNew: true },
-  { key: 'useResizeObserver', Component: ResizeObserverComponent, isNew: true },
+  { key: 'useToggle', version: '1.0.0', Component: ToggleComponent },
+  { key: 'useTimeout', version: '1.0.0', Component: TimeoutComponent },
+  { key: 'useDebounce', version: '1.5.0', Component: DebounceComponent },
+  { key: 'useUpdateEffect', version: '1.0.0', Component: UpdateEffectComponent },
+  { key: 'useArray', version: '1.0.0', Component: ArrayComponent },
+  { key: 'usePrevious', version: '1.0.0', Component: PreviousComponent },
+  { key: 'useStateWithHistory', version: '1.0.0', Component: StateWithHistoryComponent },
+  { key: 'useStorage', version: '1.0.7', Component: StorageComponent },
+  { key: 'useAsync', version: '1.1.0', Component: AsyncComponent },
+  { key: 'useFetch', version: '1.2.0', Component: FetchComponent },
+  { key: 'useScript', version: '1.2.0', Component: ScriptComponent },
+  { key: 'useEventListener', version: '1.2.0', Component: EventListenerComponent },
+  { key: 'useIsAppOffline', version: '1.2.0', Component: IsAppOfflineComponent },
+  { key: 'useWindowDimensions', version: '1.3.0', Component: WindowDimensionsComponent },
+  { key: 'useGeolocation', version: '1.5.0', Component: GeolocationComponent },
+  { key: 'useAsyncLoop', version: '1.5.0', Component: AsyncLoopComponent },
+  { key: 'useWindowFocus', version: '1.5.0', Component: WindowFocusComponent },
+  { key: 'useSubdomain', version: '1.5.3', Component: SubdomainComponent },
+  { key: 'useCopyToClipboard', version: '1.5.0', Component: CopyToClipboardComponent },
+  { key: 'useStateJson', version: '1.5.5', Component: StateJsonComponent },
+  { key: 'useColorBlend', version: '1.6.0', Component: ColorBlendComponent },
+  { key: 'useGroupByFirstLetter', version: '1.6.0', Component: GroupByFirstLetterComponent },
+  { key: 'useScrollToTop', version: '1.7.0', Component: ScrollToTopComponent },
+  { key: 'useSpeech', version: '1.10.1', Component: SpeechComponent },
+  { key: 'useProvidersTree', version: '1.11.1', Component: ProvidersTreeComponent },
+  { key: 'useHash', version: '1.10.1', Component: HashComponent },
+  { key: 'useClickOutside', version: '1.12.0', Component: ClickOutsideComponent, isNew: true },
+  { key: 'useColorScheme', version: '1.12.0', Component: ColorSchemeComponent, isNew: true },
+  { key: 'useElementSize', version: '1.12.0', Component: ElementSizeComponent, isNew: true },
+  { key: 'useResizeObserver', version: '1.12.0', Component: ResizeObserverComponent, isNew: true },
 ];
 
 export const props = {
@@ -92,4 +92,19 @@ export const sortBasedOnString = (data: any[], key: string) => {
 
     return 0;
   })
+}
+
+export const groupByBasedOnKey = (data: any[], key: string) => {
+  return data.reduce((acc, curr) => {
+
+    const objectKey = curr[key];
+
+    if (acc[objectKey]) {
+      acc[objectKey].push(curr);
+    } else {
+      acc[objectKey] = [curr]
+    }
+
+    return acc;
+  }, {});
 }

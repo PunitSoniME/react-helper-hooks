@@ -26,7 +26,6 @@ export default function UpdateEffectComponent() {
                 hook={hook}
                 info={info}
                 usage={usage}
-                version="1.0.0"
             >
                 <Demo />
             </Documentation>

@@ -32,7 +32,6 @@ export default function ProvidersTreeComponent() {
                     hook={hook}
                     info={info}
                     usage={usage}
-                    version="1.11.0"
                 >
                     <Demo />
                 </Documentation>

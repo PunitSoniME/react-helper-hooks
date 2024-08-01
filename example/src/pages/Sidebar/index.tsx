@@ -7,7 +7,7 @@ const HooksList = lazy(() => import('./HooksList'));
 export default function Sidebar() {
 
     return (
-        <ScrollArea className={`${classes.sidebar_height} w-[250px] rounded-none border`}>
+        <ScrollArea className={`${classes.sidebar_height} w-[250px] rounded-none`}>
             <div className="pl-2 pr-3 pt-2">
 
                 <Suspense fallback={<></>}>

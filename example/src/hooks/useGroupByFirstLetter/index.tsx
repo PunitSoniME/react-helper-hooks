@@ -25,7 +25,6 @@ export default function GroupByFirstLetterComponent() {
                 hook={hook}
                 info={info}
                 usage={usage}
-                version="1.6.0"
             >
                 <Demo />
             </Documentation>

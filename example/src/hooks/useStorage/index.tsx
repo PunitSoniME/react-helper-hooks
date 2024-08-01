@@ -35,7 +35,6 @@ export default function StorageComponent() {
                 hook={`${sessionStorageHook}, ${localStorageHook}`}
                 info={info}
                 usage={usage}
-                version="1.0.7"
             >
                 <Demo />
             </Documentation>

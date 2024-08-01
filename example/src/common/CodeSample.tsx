@@ -3,11 +3,16 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import rehypePrettyCode from "rehype-pretty-code";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Check, Copy } from "lucide-react";
+import { useCopyToClipboard } from "../../../";
 
-export default function CodeSample({ code }: any) {
+export default function CodeSample({ code, allowCopy = false }: any) {
 
     const ref = useRef<any>();
+
+    const copyToClipboard = useCopyToClipboard();
+    const [isCopied, setIsCopied] = useState(false);
 
     useEffect(() => {
         const process = async () => {
@@ -31,6 +36,26 @@ export default function CodeSample({ code }: any) {
     }, [code]);
 
     return (
-        <div ref={ref}></div>
+        <div className="relative">
+            <div ref={ref}></div>
+
+            {
+                allowCopy ? <div className="absolute top-4 right-4 text-white">
+                    {
+                        isCopied ? <Check size={20} /> : <Copy
+                            size={20}
+                            className='cursor-pointer'
+                            onClick={() => {
+                                copyToClipboard(code);
+                                setIsCopied(true);
+
+                                setTimeout(() => {
+                                    setIsCopied(false)
+                                }, 3000)
+                            }} />
+                    }
+                </div> : ""
+            }
+        </div>
     )
 }
