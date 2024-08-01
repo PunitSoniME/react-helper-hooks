@@ -38,6 +38,8 @@ const ProvidersTreeComponent = lazy(() => import('@/hooks/useProvidersTree'));
 const HashComponent = lazy(() => import('@/hooks/useHash'));
 const ClickOutsideComponent = lazy(() => import('@/hooks/useClickOutside'));
 const ColorSchemeComponent = lazy(() => import('@/hooks/useColorScheme'));
+const ElementSizeComponent = lazy(() => import('@/hooks/useElementSize'));
+const ResizeObserverComponent = lazy(() => import('@/hooks/useResizeObserver'));
 
 export const hooks = [
   { key: 'useToggle', Component: ToggleComponent },
@@ -67,7 +69,9 @@ export const hooks = [
   { key: 'useProvidersTree', Component: ProvidersTreeComponent },
   { key: 'useHash', Component: HashComponent },
   { key: 'useClickOutside', Component: ClickOutsideComponent, isNew: true },
-  { key: 'useColorScheme', Component: ColorSchemeComponent, isNew: true }
+  { key: 'useColorScheme', Component: ColorSchemeComponent, isNew: true },
+  { key: 'useElementSize', Component: ElementSizeComponent, isNew: true },
+  { key: 'useResizeObserver', Component: ResizeObserverComponent, isNew: true },
 ];
 
 export const props = {
