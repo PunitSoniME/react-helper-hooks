@@ -27,5 +27,7 @@ export { default as useSpeech } from './useSpeech';
 export { default as useProvidersTree } from './useProvidersTree';
 export { default as useClickOutside } from './useClickOutside';
 export { default as useColorScheme } from './useColorScheme';
+export { default as useElementSize } from './useElementSize';
+export { default as useResizeObserver } from './useResizeObserver';
 
 export { useLocalStorage, useSessionStorage };
