@@ -1,0 +1,7 @@
+import{j as e,r as i,_ as t}from"./index-1951b4f9.js";import{i as o,p as a}from"./index-6373919e.js";function r(){const n=o();return e.jsxs("div",{className:"flex flex-col gap-3 mt-2",children:[e.jsx("p",{children:"You can check either you have internet connection or not"}),e.jsxs("div",{className:"flex gap-2 items-center",children:["Your internet connection is: ",e.jsx("span",{className:`font-semibold ${n?"text-red-600":"text-green-600"}`,children:n?"Offline":"Online"}),e.jsxs("span",{className:"relative flex h-3 w-3",children:[e.jsx("span",{className:`animate-ping absolute inline-flex h-full w-full rounded-full ${n?"bg-red-600":"bg-green-600"} opacity-75`}),e.jsx("span",{className:`relative inline-flex rounded-full h-3 w-3 ${n?"bg-red-600":"bg-green-600"}`})]}),e.jsx("div",{className:"h-2 w-2 rounded animate-ping "})]})]})}const l=i.lazy(()=>t(()=>import("./Documentation-194ad9f3.js"),["assets/Documentation-194ad9f3.js","assets/index-1951b4f9.js","assets/index-c701d415.css","assets/index-6373919e.js","assets/index-c02d5048.js"])),s="useIsAppOffline",c="Know your application is running of active internet or you are offline",f=`import { ${s} } from '${a}';
+
+const isAppOffline = ${s}();
+
+/*
+    @returns - true when you don't have internet connection
+*/`;function m(){return e.jsx(i.Suspense,{fallback:e.jsx(e.Fragment,{}),children:e.jsx(l,{hook:s,info:c,usage:f,children:e.jsx(r,{})})})}export{m as default};

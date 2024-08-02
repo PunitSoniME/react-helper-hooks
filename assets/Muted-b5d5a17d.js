@@ -1,0 +1,1 @@
+import{j as o}from"./index-1951b4f9.js";import{y as s}from"./index-6373919e.js";function u({className:t,children:r,...e}){return o.jsx("p",{className:s("text-sm text-muted-foreground",t),...e,children:r})}export{u as M};
