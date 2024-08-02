@@ -1,9 +1,6 @@
 import React from 'react';
 
-type UseHashType = [
-  hash: string,
-  updateHash: (newHash: any) => void
-];
+type UseHashType = [hash: string, updateHash: (newHash: any) => void];
 
 /**
  * @since 1.10.1
