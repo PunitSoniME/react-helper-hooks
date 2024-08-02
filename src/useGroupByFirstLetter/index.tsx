@@ -19,5 +19,5 @@ export default function useGroupByFirstLetter() {
     return Object.values(groupByData);
   };
 
-  return { groupByFirstLetter };
+  return groupByFirstLetter;
 }

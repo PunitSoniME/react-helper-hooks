@@ -9,7 +9,7 @@ const info = 'Group by your data by first letter';
 
 const usage: string = `import { ${hook} } from '${packageName}';
 
-const { groupByFirstLetter } = ${hook}();
+const groupByFirstLetter = ${hook}();
 const groupByData = groupByFirstLetter(DATA, PROPERTY_NAME_TO_GROUP);
 
 /*

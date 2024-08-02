@@ -82,7 +82,7 @@ export default function LandingPage() {
                     </TableHeader>
                     <TableBody>
                         {
-                            hooksList.map((hookDetail: any) => (
+                            hooksList.filter((f: any) => f[1].length > 0).map((hookDetail: any) => (
                                 <TableRow key={hookDetail[0]}>
                                     <TableCell className="font-medium">
                                         {hookDetail[0]}

@@ -45,7 +45,7 @@ export default function Layout() {
                     </Suspense>
                 </nav>
 
-                <div className="flex min-h-screen md:divide-x container px-0 md:px-4 mt-2">
+                <div className="flex min-h-screen md:divide-x container px-0">
                     <aside className="sticky top-16 h-[calc(100vh-theme(spacing.16))] w-[250px] hidden md:block">
                         <Suspense fallback={<></>}>
                             <Sidebar />
@@ -62,7 +62,7 @@ export default function Layout() {
                         </ScrollArea>
                     </SheetContent>
 
-                    <main className="flex-1 mt-14 pr-4 overflow-x-auto">
+                    <main className="flex-1 mt-14 overflow-x-auto">
                         {
                             hash ?
                                 <Suspense fallback={<></>}>

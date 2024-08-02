@@ -10,7 +10,7 @@ const data = ["A", "AA", "B", "BB", "C", "CC", "D", "DD"].map((m, index) => {
 
 export default function Demo() {
 
-    const { groupByFirstLetter } = useGroupByFirstLetter();
+    const groupByFirstLetter = useGroupByFirstLetter();
     const groupByData = groupByFirstLetter(data, 'name') as any[];
 
     return (

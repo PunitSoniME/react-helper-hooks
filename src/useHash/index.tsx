@@ -1,10 +1,15 @@
 import React from 'react';
 
+type UseHashType = [
+  hash: string,
+  updateHash: (newHash: any) => void
+];
+
 /**
  * @since 1.10.1
  */
-export default function useHash() {
-  const [hash, setHash] = React.useState(() => window.location.hash);
+export default function useHash(): UseHashType {
+  const [hash, setHash] = React.useState<string>(() => window.location.hash);
 
   const hashChangeHandler = React.useCallback(() => {
     setHash(window.location.hash);
